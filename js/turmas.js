@@ -1,4 +1,4 @@
-const API_URL = "https://front-separado1.vercel.app/turmas";
+const API_URL = "https://testando-production-8a14.up.railway.app/turmas";
 
 async function listarTurmas() {
     const res = await fetch(API_URL);

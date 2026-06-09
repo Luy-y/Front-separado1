@@ -1,4 +1,4 @@
-const API = "https://front-separado1.vercel.app/ocupacao-hoje";
+const API = "https://testando-production-8a14.up.railway.app/ocupacao-hoje";
 
 function formatarHora(data) {
     const d = new Date(data);
@@ -9,7 +9,7 @@ function formatarHora(data) {
     });
 }
 
-/* 🔥 define turno atual no FRONT também */
+
 function getTurnoAtual() {
     const agora = new Date();
 

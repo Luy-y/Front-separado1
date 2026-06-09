@@ -1,7 +1,7 @@
-const API_URL = "https://front-separado1.vercel.app/registros";
-const API_AMBIENTES = "https://front-separado1.vercel.app/ambientes";
-const API_INSTRUTORES = "https://front-separado1.vercel.app/instrutores";
-const API_TURMAS = "https://front-separado1.vercel.app/turmas";
+const API_URL = "https://testando-production-8a14.up.railway.app/registros";
+const API_AMBIENTES = "https://testando-production-8a14.up.railway.app/ambientes";
+const API_INSTRUTORES = "https://testando-production-8a14.up.railway.app/instrutores";
+const API_TURMAS = "https://testando-production-8a14.up.railway.app/turmas";
 
 let ambientesMap = {};
 let instrutoresMap = {};

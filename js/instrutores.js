@@ -1,4 +1,4 @@
-const API_URL = "https://front-separado1.vercel.app/instrutores";
+const API_URL = "https://testando-production-8a14.up.railway.app/instrutores";
 
 // ================= LISTAR =================
 async function listarInstrutores() {

@@ -8,7 +8,7 @@ async function efetuarLogin() {
     }
 
     try {
-        const response = await fetch('https://front-separado1.vercel.app/autenticacao/login', {
+        const response = await fetch('https://testando-production-8a14.up.railway.app/autenticacao/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })

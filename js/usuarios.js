@@ -1,4 +1,4 @@
-const API_URL = "https://front-separado1.vercel.app/usuarios";
+const API_URL = "https://testando-production-8a14.up.railway.app/usuarios";
 
 async function listarUsuarios() {
 
