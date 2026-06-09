@@ -1,7 +1,7 @@
-const API_URL = "http://localhost:3000/registros";
-const API_AMBIENTES = "http://localhost:3000/ambientes";
-const API_INSTRUTORES = "http://localhost:3000/instrutores";
-const API_TURMAS = "http://localhost:3000/turmas";
+const API_URL = "https://front-separado1.vercel.app/registros";
+const API_AMBIENTES = "https://front-separado1.vercel.app/ambientes";
+const API_INSTRUTORES = "https://front-separado1.vercel.app/instrutores";
+const API_TURMAS = "https://front-separado1.vercel.app/turmas";
 
 let ambientesMap = {};
 let instrutoresMap = {};

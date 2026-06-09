@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/instrutores";
+const API_URL = "https://front-separado1.vercel.app/instrutores";
 
 // ================= LISTAR =================
 async function listarInstrutores() {

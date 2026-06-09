@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/relatorios/ocupacao-hoje";
+const API = "https://front-separado1.vercel.app/ocupacao-hoje";
 
 function formatarHora(data) {
     const d = new Date(data);
