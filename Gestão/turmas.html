@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Turmas</title>
+
+    <link rel="stylesheet" href="css/turmas.css">
+    <script src="js/auth.js" defer></script>
+    <script src="js/turmas.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="side-menu" id="side-menu">
+        <ul>
+            <li id="menuUsuarios"><a href="usuarios.html">Gestão de Usuários</a></li>
+            <li id="menuAmbientes"><a href="ambientes.html">Gestão de Ambientes</a></li>
+            <li id="menuInstrutores"><a href="instrutores.html">Gestão de Instrutores</a></li>
+            <li id="menuTurmas"><a href="turmas.html">Gestão de Turmas</a></li>
+            <li id="menuRegistros"><a href="registros.html">Registrar Ocupação</a></li>
+            <li id="menuOcupacao"><a href="ocupacao.html">Ocupação em Tempo Real</a></li>
+            <li id="menuPainel"><a href="painel.html">Ocupação em Tempo Real</a></li>
+            <li id="menuRelatorios"><a href="relatorios.html">Gerar Relatório</a></li>
+        </ul>
+    </nav>
+
+    <div class="home">
+        <button class="menu-btn" id="menu-btn">
+            <img src="img/lula.png" alt="Menu">
+        </button>
+    </div>
+
+    <div id="menu-config" class="menu-config">
+        <button onclick="logout()">Sair</button>
+    </div>
+
+    <div class="header-onda">
+        <h1>Turmas</h1>
+    </div>
+
+    <div class="container-mais">
+        <div class="menu-mais">
+            <button onclick="abrirModalAdicionar()">Nova Turma</button>
+        </div>
+    </div>
+
+    <div class="tabela-wrapper">
+        <table class="Tabelas">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome da Turma</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaTurmas"></tbody>
+        </table>
+    </div>
+
+    <div id="overlay" class="blur-overlay"></div>
+
+    <div id="modalAdicionar" class="modal">
+        <div class="modal-content">
+            <h2>Nova Turma</h2>
+            <input id="nomeAdd" placeholder="Nome da Turma" required>
+
+            <div class="modal-buttons">
+                <button onclick="fecharModal('modalAdicionar')">Cancelar</button>
+                <button onclick="adicionarTurma()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalEditar" class="modal">
+        <div class="modal-content">
+            <h2>Editar Turma</h2>
+            <input id="idEdit" type="hidden">
+            <input id="nomeEdit" placeholder="Nome da Turma" required>
+
+            <div class="modal-buttons">
+                <button onclick="fecharModal('modalEditar')">Cancelar</button>
+                <button onclick="salvarEdicao()">Atualizar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-onda">
+        <img src="img/tela1.png" alt="SENAI">
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.getElementById("menu-btn");
+            const sideMenu = document.getElementById("side-menu");
+            const tabela = document.querySelector(".tabela-wrapper");
+            const overlay = document.getElementById("overlay");
+            const botaoAdicionar = document.querySelector(".menu-mais");
+            const botaoSair = document.querySelector(".menu-config");
+
+            function fecharMenu() {
+                sideMenu.classList.remove("open");
+                overlay.classList.remove("active");
+                if(tabela) tabela.classList.remove("shift");
+                if(botaoAdicionar) botaoAdicionar.classList.remove("faded");
+                if(botaoSair) botaoSair.classList.remove("faded");
+            }
+
+            menuBtn.addEventListener("click", () => {
+                const aberto = sideMenu.classList.toggle("open");
+                overlay.classList.toggle("active", aberto);
+                if(tabela) tabela.classList.toggle("shift", aberto);
+                if(botaoAdicionar) botaoAdicionar.classList.toggle("faded", aberto);
+                if(botaoSair) botaoSair.classList.toggle("faded", aberto);
+            });
+
+            overlay.addEventListener("click", fecharMenu);
+        });
+    </script>
+
+</body>
+</html>

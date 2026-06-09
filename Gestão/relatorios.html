@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar Relatórios</title>
+
+    <link rel="stylesheet" href="css/relatorios.css">
+    <script src="js/auth.js" defer></script>
+    <script src="js/relatorios.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="side-menu" id="side-menu">
+        <ul>
+            <li id="menuUsuarios"><a href="usuarios.html">Gestão de Usuários</a></li>
+            <li id="menuAmbientes"><a href="ambientes.html">Gestão de Ambientes</a></li>
+            <li id="menuInstrutores"><a href="instrutores.html">Gestão de Instrutores</a></li>
+            <li id="menuTurmas"><a href="turmas.html">Gestão de Turmas</a></li>
+            <li id="menuRegistros"><a href="registros.html">Registrar Ocupação</a></li>
+            <li id="menuOcupacao"><a href="ocupacao.html">Ocupação em Tempo Real</a></li>
+            <li id="menuPainel"><a href="painel.html">Ocupação em Tempo Real</a></li>
+            <li id="menuRelatorios"><a href="relatorios.html">Gerar Relatório</a></li>
+        </ul>
+    </nav>
+
+    <div class="home">
+        <button class="menu-btn" id="menu-btn">
+            <img src="img/lula.png" alt="Menu">
+        </button>
+    </div>
+
+    <div id="menu-config" class="menu-config">
+        <button onclick="logout()">Sair</button>
+    </div>
+
+    <div class="header-onda">
+        <h1>Relatórios</h1>
+    </div>
+
+    <main class="main-content">
+        <div class="top-controls">
+            <div class="control-group">
+                <label>Início</label>
+                <input type="datetime-local" id="dataInicio">
+            </div>
+
+            <div class="control-group">
+                <label>Fim</label>
+                <input type="datetime-local" id="dataFim">
+            </div>
+
+            <div class="control-group">
+                <label>Ambiente</label>
+                <select id="filtroAmbiente"></select>
+            </div>
+
+            <div class="control-group">
+                <label>Instrutor</label>
+                <select id="filtroInstrutor"></select>
+            </div>
+
+            <div class="control-group">
+                <label>Turma</label>
+                <select id="filtroTurma"></select>
+            </div>
+
+            <div class="button-group">
+                <button onclick="exportarRelatorio()">Exportar</button>
+            </div>
+        </div>
+
+        <div class="tabela-wrapper">
+            <table class="Tabelas">
+                <thead>
+                    <tr>
+                        <th>Data Início</th>
+                        <th>Data Fim</th>
+                        <th>Ambiente</th>
+                        <th>Instrutor</th>
+                        <th>Turma</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaRelatorios"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <div id="overlay" class="blur-overlay"></div>
+
+    <footer class="footer-onda">
+        <img src="img/tela1.png" alt="SENAI">
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.getElementById("menu-btn");
+            const sideMenu = document.getElementById("side-menu");
+            const tabelaWrapper = document.querySelector(".tabela-wrapper");
+            const overlay = document.getElementById("overlay");
+            const controls = document.querySelector(".top-controls");
+            const botaoSair = document.querySelector(".menu-config");
+
+            function fecharMenu() {
+                sideMenu.classList.remove("open");
+                tabelaWrapper.classList.remove("shift");
+                overlay.classList.remove("active");
+                controls.classList.remove("faded");
+                botaoSair.classList.remove("faded");
+            }
+
+            menuBtn.addEventListener("click", () => {
+                const aberto = sideMenu.classList.toggle("open");
+                tabelaWrapper.classList.toggle("shift", aberto);
+                overlay.classList.toggle("active", aberto);
+                controls.classList.toggle("faded", aberto);
+                botaoSair.classList.toggle("faded", aberto);
+            });
+
+            overlay.addEventListener("click", fecharMenu);
+        });
+    </script>
+</body>
+
+</html>

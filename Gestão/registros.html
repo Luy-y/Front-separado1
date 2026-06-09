@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Ocupação</title>
+
+    <link rel="stylesheet" href="css/registros.css">
+    <script src="js/auth.js" defer></script>
+    <script src="js/registros.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="side-menu" id="side-menu">
+        <ul>
+            <li id="menuUsuarios"><a href="usuarios.html">Gestão de Usuários</a></li>
+            <li id="menuAmbientes"><a href="ambientes.html">Gestão de Ambientes</a></li>
+            <li id="menuInstrutores"><a href="instrutores.html">Gestão de Instrutores</a></li>
+            <li id="menuTurmas"><a href="turmas.html">Gestão de Turmas</a></li>
+            <li id="menuRegistros"><a href="registros.html">Registrar Ocupação</a></li>
+            <li id="menuOcupacao"><a href="ocupacao.html">Ocupação em Tempo Real</a></li>
+            <li id="menuPainel"><a href="painel.html">Ocupação em Tempo Real</a></li>
+            <li id="menuRelatorios"><a href="relatorios.html">Gerar Relatório</a></li>
+        </ul>
+    </nav>
+
+    <div class="home">
+        <button class="menu-btn" id="menu-btn">
+            <img src="img/lula.png" alt="Menu">
+        </button>
+    </div>
+
+    <div id="menu-config" class="menu-config">
+        <button onclick="logout()">Sair</button>
+    </div>
+
+    <div class="header-onda">
+        <h1>Registros</h1>
+    </div>
+
+    <div class="container-mais">
+        <div class="menu-mais">
+            <button onclick="abrirModalAdicionar()">Adicionar Registro</button>
+        </div>
+    </div>
+
+    <div class="tabela-wrapper">
+        <table class="Tabelas">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ambiente</th>
+                    <th>Instrutor</th>
+                    <th>Turma</th>
+                    <th>Início</th>
+                    <th>Fim</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaRegistros"></tbody>
+        </table>
+    </div>
+
+    <div id="overlay" class="blur-overlay"></div>
+
+    <div id="modalAdicionar" class="modal">
+        <div class="modal-content">
+            <h2>Novo Registro</h2>
+
+            <select id="ambienteAdd"></select>
+            <select id="instrutorAdd"></select>
+            <select id="turmaAdd"></select>
+            
+            <label style="font-size: 12px; color: var(--muted); margin-bottom: -10px;">Data/Hora Início</label>
+            <input id="dataInicioAdd" type="datetime-local" required>
+            
+            <label style="font-size: 12px; color: var(--muted); margin-bottom: -10px;">Data/Hora Fim</label>
+            <input id="dataFimAdd" type="datetime-local" required>
+
+            <div class="modal-buttons">
+                <button onclick="fecharModal('modalAdicionar')">Cancelar</button>
+                <button onclick="adicionarRegistro()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalEditar" class="modal">
+        <div class="modal-content">
+            <h2>Editar Registro</h2>
+
+            <input id="idEdit" type="hidden">
+            <select id="ambienteEdit"></select>
+            <select id="instrutorEdit"></select>
+            <select id="turmaEdit"></select>
+
+            <label style="font-size: 12px; color: var(--muted); margin-bottom: -10px;">Data/Hora Início</label>
+            <input id="dataInicioEdit" type="datetime-local" required>
+            
+            <label style="font-size: 12px; color: var(--muted); margin-bottom: -10px;">Data/Hora Fim</label>
+            <input id="dataFimEdit" type="datetime-local" required>
+
+            <div class="modal-buttons">
+                <button onclick="fecharModal('modalEditar')">Cancelar</button>
+                <button onclick="salvarEdicao()">Atualizar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-onda">
+        <img src="img/tela1.png" alt="SENAI">
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.getElementById("menu-btn");
+            const sideMenu = document.getElementById("side-menu");
+            const tabela = document.querySelector(".tabela-wrapper");
+            const overlay = document.getElementById("overlay");
+            const botaoAdicionar = document.querySelector(".menu-mais");
+            const botaoSair = document.querySelector(".menu-config");
+
+            function fecharMenu() {
+                sideMenu.classList.remove("open");
+                tabela.classList.remove("shift");
+                overlay.classList.remove("active");
+                botaoAdicionar.classList.remove("faded");
+                botaoSair.classList.remove("faded");
+            }
+
+            menuBtn.addEventListener("click", () => {
+                const aberto = sideMenu.classList.toggle("open");
+                tabela.classList.toggle("shift", aberto);
+                overlay.classList.toggle("active", aberto);
+                botaoAdicionar.classList.toggle("faded", aberto);
+                botaoSair.classList.toggle("faded", aberto);
+            });
+
+            overlay.addEventListener("click", fecharMenu);
+        });
+    </script>
+</body>
+</html>

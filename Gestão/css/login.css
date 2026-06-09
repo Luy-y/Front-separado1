@@ -1,0 +1,291 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* 🔧 melhora mobile real */
+html, body{
+  width:100%;
+  min-height:100vh; /* melhor que height:100% */
+  overflow-x:hidden;
+}
+
+/* =========================================
+ BACKGROUND
+========================================= */
+
+body{
+  position:relative;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:
+      radial-gradient(circle at top left, rgba(71, 87, 255, 0.20), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(20, 14, 159, 0.30), transparent 35%),
+      linear-gradient(135deg, #050816, #0d1329);
+
+  color:white;
+}
+
+/* brilho decorativo */
+.background-glow{
+  position:absolute;
+  width:500px;
+  height:500px;
+
+  background:rgba(71, 87, 255, 0.12);
+
+  filter:blur(120px);
+
+  border-radius:50%;
+
+  top:-150px;
+  right:-150px;
+
+  z-index:0;
+}
+
+/* =========================================
+ LOGIN CARD
+========================================= */
+
+.login-card{
+  position:relative;
+  z-index:1;
+
+  width:100%;
+  max-width:420px;
+
+  padding:40px 35px;
+
+  border-radius:24px;
+
+  background:rgba(15, 20, 40, 0.92);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(14px);
+
+  box-shadow:
+      0 15px 40px rgba(0,0,0,0.45),
+      0 0 0 1px rgba(255,255,255,0.02);
+
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+
+  animation:fadeUp .5s ease;
+}
+
+/* =========================================
+ HEADER
+========================================= */
+
+.login-header{
+  text-align:center;
+  margin-bottom:5px;
+}
+
+.login-header h2{
+  font-size:28px;
+  font-weight:700;
+  line-height:1.3;
+
+  margin-bottom:10px;
+
+  color:#ffffff;
+}
+
+.login-header p{
+  font-size:14px;
+  color:rgba(255,255,255,0.65);
+}
+
+/* =========================================
+ INPUTS
+========================================= */
+
+.input-group{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.input-group label{
+  font-size:14px;
+  font-weight:600;
+  color:rgba(255,255,255,0.85);
+}
+
+.input-group input{
+  width:100%;
+  padding:14px 16px;
+
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.08);
+
+  background:rgba(255,255,255,0.05);
+  color:#fff;
+
+  outline:none;
+
+  transition:.25s ease;
+}
+
+.input-group input::placeholder{
+  color:rgba(255,255,255,0.35);
+}
+
+.input-group input:focus{
+  border-color:#5b6cff;
+  background:rgba(91, 108, 255, 0.08);
+
+  box-shadow:0 0 0 4px rgba(91, 108, 255, 0.12);
+
+  transform:translateY(-1px);
+}
+
+/* =========================================
+ BUTTON
+========================================= */
+
+.login-card button{
+  width:100%;
+  margin-top:8px;
+
+  padding:14px;
+
+  border:none;
+  border-radius:14px;
+
+  background:linear-gradient(135deg, #4d5dff, #140E9F);
+
+  color:#fff;
+
+  font-size:15px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.2s ease;
+}
+
+.login-card button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(77, 93, 255, 0.35);
+}
+
+.login-card button:active{
+  transform:scale(.98);
+}
+
+/* =========================================
+ ERROR
+========================================= */
+
+.error{
+  display:none;
+
+  padding:12px;
+  border-radius:12px;
+
+  background:rgba(255, 107, 107, 0.12);
+  border:1px solid rgba(255, 107, 107, 0.25);
+
+  color:#ff8f8f;
+
+  text-align:center;
+  font-size:13px;
+}
+
+/* =========================================
+ FOOTER
+========================================= */
+
+.footer{
+  margin-top:5px;
+}
+
+.footer img{
+  max-width:130px;
+  width:100%;
+  height:auto;
+
+  display:block;
+  margin:0 auto;
+
+  opacity:.9;
+  transition:transform .3s ease;
+}
+
+.footer img:hover{
+  transform:scale(1.03);
+}
+
+/* =========================================
+ ANIMAÇÕES
+========================================= */
+
+@keyframes fadeUp{
+  from{
+      opacity:0;
+      transform:translateY(20px);
+  }
+
+  to{
+      opacity:1;
+      transform:translateY(0);
+  }
+}
+
+/* =========================================
+ RESPONSIVIDADE REAL
+========================================= */
+
+/* tablets */
+@media (max-width: 768px){
+  .login-card{
+    max-width:380px;
+    padding:34px 28px;
+  }
+}
+
+/* celulares */
+@media (max-width: 480px){
+
+  body{
+    padding:20px;
+    align-items:center;
+  }
+
+  .login-card{
+    width:100%;
+    max-width:100%;
+    padding:28px 22px;
+    border-radius:18px;
+  }
+
+  .login-header h2{
+    font-size:24px;
+  }
+}
+
+/* celulares pequenos */
+@media (max-width: 360px){
+
+  .login-card{
+    padding:22px 18px;
+  }
+
+  .login-header h2{
+    font-size:22px;
+  }
+
+  .input-group input{
+    padding:12px 14px;
+  }
+}

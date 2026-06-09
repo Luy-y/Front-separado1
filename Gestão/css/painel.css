@@ -1,0 +1,281 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000b33;
+}
+
+
+/* HEADER */
+
+header {
+    height: 100px;
+    background: radial-gradient(circle at center, var(--primary), #000b33);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo h1 {
+    margin: 0;
+    font-size: clamp(18px, 3vw, 28px);
+}
+
+.titulo span {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* DIREITA */
+.info-direita {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.data, .hora {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.data { font-size: clamp(16px, 2vw, 28px); }
+.hora { font-size: clamp(20px, 3vw, 36px); }
+
+.icon {
+    font-size: clamp(18px, 3vw, 36px);
+}
+
+
+/* MAIN */
+
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+
+    /* 🔥 ALTURA EXATA DA TELA */
+    height: calc(100vh - 170px);
+}
+
+
+/* TABELA */
+
+.tabela {
+    flex: 2;
+    overflow-y: auto; /* 🔥 SCROLL SÓ AQUI */
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    color: #555;
+    border-bottom: 2px solid #3c09f3;
+}
+
+td {
+    color: #222;
+    font-weight: 500;
+}
+
+tbody tr {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background: #f9f9f9;
+}
+
+/* TURMA */
+.box-turma {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone {
+    width: 40px;
+    height: 40px;
+    background: #0b1f3a;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+}
+
+/* SALA */
+.sala {
+    background: #e30613;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+
+/* RODAPÉ */
+
+.rodape-senai {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    height: 70px;
+    background: radial-gradient(circle at center, var(--primary), #000b33);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+}
+
+.info-bloco {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone-circulo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textos {
+    display: flex;
+    flex-direction: column;
+}
+
+.linha {
+    width: 1px;
+    height: 30px;
+    background: rgba(255,255,255,0.3);
+    margin: 0 20px;
+}
+
+.logo-final {
+    margin-left: auto;
+}
+
+.logo-final img {
+    height: 30px;
+}
+
+
+/* RESPONSIVO */
+
+
+@media (max-width: 900px) {
+    html, body {
+        overflow: auto; /* libera scroll no celular */
+    }
+
+    main {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-direita {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .rodape-senai {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .linha {
+        display: none;
+    }
+}
+
+/* TELAS GRANDES */
+@media (min-width: 1600px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    .titulo h1 {
+        font-size: 42px;
+    }
+
+    .data {
+        font-size: 36px;
+    }
+
+    .hora {
+        font-size: 50px;
+    }
+
+    th, td {
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .sala {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Painel de Salas</title>
+
+  <link rel="stylesheet" href="css/painel.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="img/tela1.png" class="logo" />
+
+    <div class="titulo">
+      <h1>PAINEL DE SALAS</h1>
+      <span>Encontre sua turma e sala</span>
+    </div>
+
+    <div class="info-direita">
+
+      <div class="data">
+        <span class="icon">📅</span>
+
+        <div>
+          <strong id="dataAtual">--/--/----</strong><br>
+          <small id="diaSemana">---------</small>
+        </div>
+      </div>
+
+      <div class="hora">
+        <span class="icon">🕒</span>
+        <strong id="horaAtual">00:00</strong>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="tabela">
+
+      <div class="status-turno">
+        <h3 id="statusTurno">Carregando turno...</h3>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Turma</th>
+            <th>Curso</th>
+            <th>Instrutor</th>
+            <th>Sala</th>
+            <th>Horário</th>
+          </tr>
+        </thead>
+
+        <tbody id="tabelaOcupacao">
+          <tr>
+            <td colspan="5">Carregando ocupações...</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </section>
+
+  </main>
+
+  <footer class="rodape-senai">
+
+    <div class="info-bloco">
+      <div class="icone-circulo">i</div>
+
+      <div class="textos">
+        <span class="titulo">BEM-VINDO AO SENAI!</span>
+        <span class="sub">Tecnologia para transformar vidas.</span>
+      </div>
+    </div>
+
+    <div class="linha"></div>
+
+    <div class="info-bloco">
+      <div class="icone-circulo">📍</div>
+
+      <div class="textos">
+        <span class="titulo">ENCONTRE SUA SALA</span>
+        <span class="sub">Mais agilidade, mais aprendizado.</span>
+      </div>
+    </div>
+
+    <div class="logo-final">
+      <img src="img/tela1.png">
+    </div>
+
+  </footer>
+
+  <script src="js/painel.js"></script>
+
+</body>
+
+</html>

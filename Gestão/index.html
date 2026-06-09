@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/login.css">
+
+    <title>Página de Login</title>
+</head>
+
+<body>
+
+    <div class="background-glow"></div>
+
+    <div class="login-card">
+
+        <div class="login-header">
+            <h2>Sistema de Gestão de Ambientes</h2>
+            <p>Faça login para continuar</p>
+        </div>
+
+        <div class="input-group">
+            <label>E-mail</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail">
+        </div>
+
+        <div class="input-group">
+            <label>Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha">
+        </div>
+
+        <button onclick="efetuarLogin()">Entrar</button>
+
+        <div class="error" id="erro">
+            Usuário ou senha inválidos
+        </div>
+
+        <div class="footer">
+            <img src="img/tela1.png">
+        </div>
+
+    </div>
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>
