@@ -1,4 +1,4 @@
-const API_URL = "https://testando-production-8a14.up.railway.app/ambientes";
+const API_URL = "https://api-production-19484.up.railway.app//ambientes";
 
 async function listarAmbientes() {
 
