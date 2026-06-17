@@ -22,10 +22,10 @@ async function efetuarLogin() {
             localStorage.setItem('tipo_usuario', data.user.tipo);
 
             if (data.user.tipo === 'ADM') {
-                window.location.href = '../html/usuarios.html';
+                window.location.href = '/usuarios.html';
             } 
             else if (data.user.tipo === 'Porteiro') {
-                window.location.href = '../html/registros.html';
+                window.location.href = '/registros.html';
             } 
             else {
                 alert("Tipo de usuário inválido!");
