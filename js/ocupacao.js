@@ -32,6 +32,7 @@ function getTurnoAtual() {
 async function carregarOcupacao() {
     try {
         const turno = getTurnoAtual();
+        console.log(turno, "turno");
         const status = document.getElementById("statusTurno");
 
         if (!turno) {
@@ -47,6 +48,7 @@ async function carregarOcupacao() {
 
         const res = await fetch(API);
         const dados = await res.json();
+        console.log(res, API, "teste")
 
         const tabela = document.getElementById("tabelaOcupacao");
         tabela.innerHTML = "";
