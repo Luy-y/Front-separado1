@@ -1,4 +1,4 @@
-const API = "https://api-production-19484.up.railway.app/ocupacao-hoje";
+const API = "https://api-production-19484.up.railway.app/relatorios/ocupacao-hoje";
 
 function formatarHora(data) {
     const d = new Date(data);
