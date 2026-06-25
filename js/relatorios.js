@@ -3,6 +3,7 @@ const API_AMBIENTES = "https://api-production-19484.up.railway.app/ambientes";
 const API_INSTRUTORES = "https://api-production-19484.up.railway.app/instrutores";
 const API_TURMAS = "https://api-production-19484.up.railway.app/turmas";
 
+
 function formatarData(data) {
     if (!data) return "";
 
