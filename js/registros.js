@@ -1,7 +1,7 @@
-const API_URL = "https://api-production-19484.up.railway.app/js/ocupacao.js";
-const API_AMBIENTES = "https://api-production-19484.up.railway.app/js/ocupacao.js";
-const API_INSTRUTORES = "https://api-production-19484.up.railway.app//js/ocupacao.js";
-const API_TURMAS = "https://api-production-19484.up.railway.app/js/ocupacao.js";
+const API_URL = "https://api-production-19484.up.railway.app/ocupacao.js";
+const API_AMBIENTES = "https://api-production-19484.up.railway.app/ocupacao.js";
+const API_INSTRUTORES = "https://api-production-19484.up.railway.app/ocupacao.js";
+const API_TURMAS = "https://api-production-19484.up.railway.app/ocupacao.js";
 
 let ambientesMap = {};
 let instrutoresMap = {};
