@@ -80,80 +80,6 @@ main {
 }
 
 
-/* TABELA */
-
-.tabela {
-    flex: 2;
-    overflow-y: auto; /* 🔥 SCROLL SÓ AQUI */
-}
-
-table {
-    width: 100%;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-}
-
-th {
-    color: #555;
-    border-bottom: 2px solid #3c09f3;
-}
-
-td {
-    color: #222;
-    font-weight: 500;
-}
-
-tbody tr {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    border-bottom: 1px solid #eee;
-}
-
-tr:hover {
-    background: #f9f9f9;
-}
-
-/* TURMA */
-.box-turma {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.icone {
-    width: 40px;
-    height: 40px;
-    background: #0b1f3a;
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 10px;
-
-    font-size: 20px;
-}
-
-/* SALA */
-.sala {
-    background: #e30613;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-
-
 /* RODAPÉ */
 
 .rodape-senai {
@@ -206,18 +132,219 @@ tr:hover {
     height: 30px;
 }
 
+/* =======================================================
+   PAINEL DO MAPA (SVG)
+======================================================= */
 
-/* RESPONSIVO */
+.painel-mapa {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
 
+.status-turno {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+
+/* mapa + painel lateral lado a lado */
+.conteudo-mapa {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    min-height: 0;
+}
+
+#mapa {
+    flex: 3;
+    position: relative;
+    min-height: 0;
+
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.carregando-svg {
+    color: #aaa;
+    font-size: 16px;
+}
+
+/* o SVG é injetado dentro de #mapaSvgContainer via JS (fetch + innerHTML) */
+#mapaSvgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* a planta já está desenhada na orientação correta/horizontal:
+   apenas limitamos a altura para caber na tela, sem rotação */
+#mapaSvgContainer svg {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    background: white;
+    border-radius: 10px;
+}
+
+
+/* ===========================
+   SALAS DENTRO DO SVG
+=========================== */
+
+.sala-svg rect {
+    transition: fill .4s ease, stroke .4s ease, filter .4s ease;
+}
+
+.lab-room .status-label {
+    font-size: 11px;
+}
+
+/* estados (a mesma nomenclatura usada no restante do projeto) */
+
+.lab-room.livre rect.lab-rect {
+    fill: #eafff2;
+    stroke: #00a63c;
+    stroke-width: 3;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 102, .9));
+}
+.lab-room.livre .status-label {
+    fill: #00a63c;
+}
+
+.lab-room.ocupado rect.lab-rect {
+    fill: #ffecec;
+    stroke: #d50000;
+    stroke-width: 3;
+    filter: drop-shadow(0 0 16px rgba(255, 40, 40, .95));
+}
+.lab-room.ocupado .status-label {
+    fill: #d50000;
+}
+
+.lab-room.indisponivel rect.lab-rect {
+    fill: #ececec;
+    stroke: #888;
+    stroke-width: 2;
+    filter: none;
+}
+.lab-room.indisponivel .status-label {
+    fill: #888;
+}
+
+
+/* =======================================================
+   PAINEL LATERAL — DETALHES DAS SALAS OCUPADAS
+======================================================= */
+
+.detalhes-ocupacao {
+    flex: 1;
+    min-height: 0;
+
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 15px;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.detalhes-ocupacao h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.lista-ocupados {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-ocupado {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #d50000;
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+
+.item-ocupado .icone {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+
+    background: #0b1f3a;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.item-ocupado .info {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.item-ocupado .info strong {
+    font-size: 14px;
+}
+
+.sem-ocupacao,
+.erro-ocupacao {
+    opacity: .75;
+    font-size: 14px;
+}
+
+.erro-ocupacao {
+    color: #ff8080;
+}
+
+
+/* ========================
+   RESPONSIVO
+======================== */
 
 @media (max-width: 900px) {
     html, body {
-        overflow: auto; /* libera scroll no celular */
+        overflow: auto;
     }
 
     main {
         flex-direction: column;
         height: auto;
+    }
+
+    .conteudo-mapa {
+        flex-direction: column;
+    }
+
+    #mapa, .detalhes-ocupacao {
+        flex: none;
+        height: 60vh;
     }
 }
 
@@ -232,11 +359,6 @@ tr:hover {
         margin-left: 0;
         width: 100%;
         justify-content: space-between;
-    }
-
-    th, td {
-        font-size: 12px;
-        padding: 10px;
     }
 
     .rodape-senai {
@@ -270,12 +392,7 @@ tr:hover {
         font-size: 50px;
     }
 
-    th, td {
-        font-size: 18px;
-        padding: 20px;
-    }
-
-    .sala {
-        font-size: 20px;
+    .lab-room .status-label {
+        font-size: 13px;
     }
 }

@@ -41,30 +41,31 @@
 
   <main>
 
-    <section class="tabela">
+    <section class="painel-mapa">
 
       <div class="status-turno">
         <h3 id="statusTurno">Carregando turno...</h3>
       </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Turma</th>
-            <th>Curso</th>
-            <th>Instrutor</th>
-            <th>Sala</th>
-            <th>Horário</th>
-          </tr>
-        </thead>
+      <div class="conteudo-mapa">
 
-        <tbody id="tabelaOcupacao">
-          <tr>
-            <td colspan="5">Carregando ocupações...</td>
-          </tr>
-        </tbody>
+        <!-- MAPA (SVG injetado via JS em #mapaSvgContainer) -->
+        <div id="mapa">
+          <div id="mapaSvgContainer">
+            <p class="carregando-svg">Carregando mapa...</p>
+          </div>
+        </div>
 
-      </table>
+        <!-- DETALHES DAS SALAS OCUPADAS AGORA -->
+        <aside class="detalhes-ocupacao">
+          <h3>Em andamento agora</h3>
+          <div id="listaOcupados" class="lista-ocupados">
+            <p class="sem-ocupacao">Carregando...</p>
+          </div>
+        </aside>
+
+      </div>
+
     </section>
 
   </main>
