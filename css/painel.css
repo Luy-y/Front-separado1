@@ -1,34 +1,35 @@
-/* RESET */
-* {
+/* ═══════════════════════════════════════
+   RESET
+═══════════════════════════════════════ */
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
     overflow: hidden;
-}
-
-body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: #000b33;
 }
 
 
-/* HEADER */
-
+/* ═══════════════════════════════════════
+   HEADER
+═══════════════════════════════════════ */
 header {
-    height: 100px;
-    background: radial-gradient(circle at center, var(--primary), #000b33);
+    height: 90px;
+    background: radial-gradient(circle at center, #1a3a8f, #000b33);
     color: white;
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 10px 20px;
+    padding: 10px 24px;
+    flex-shrink: 0;
 }
 
 .logo {
-    height: 50px;
+    height: 48px;
 }
 
 .titulo {
@@ -38,20 +39,20 @@ header {
 
 .titulo h1 {
     margin: 0;
-    font-size: clamp(18px, 3vw, 28px);
+    font-size: clamp(18px, 2.4vw, 28px);
+    letter-spacing: .5px;
 }
 
 .titulo span {
-    font-size: 14px;
-    color: #ccc;
+    font-size: 13px;
+    color: #bcd;
 }
 
-/* DIREITA */
 .info-direita {
     margin-left: auto;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
 }
 
 .data, .hora {
@@ -60,39 +61,134 @@ header {
     gap: 8px;
 }
 
-.data { font-size: clamp(16px, 2vw, 28px); }
-.hora { font-size: clamp(20px, 3vw, 36px); }
+.data { font-size: clamp(14px, 1.8vw, 22px); }
+.hora { font-size: clamp(18px, 2.6vw, 32px); font-weight: bold; }
 
-.icon {
-    font-size: clamp(18px, 3vw, 36px);
-}
+.icon { font-size: clamp(18px, 2.4vw, 28px); }
 
 
-/* MAIN */
-
+/* ═══════════════════════════════════════
+   MAIN — ocupa o espaço entre header e footer
+═══════════════════════════════════════ */
 main {
+    height: calc(100vh - 90px - 60px); /* header + footer */
+    padding: 14px 18px;
     display: flex;
-    gap: 20px;
-    padding: 20px;
+}
 
-    /* 🔥 ALTURA EXATA DA TELA */
-    height: calc(100vh - 170px);
+.painel-mapa {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 0;
+}
+
+.status-turno {
+    color: white;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.status-turno h3 {
+    margin: 0;
 }
 
 
-/* RODAPÉ */
+/* ═══════════════════════════════════════
+   MAPA SVG — ocupa todo o espaço restante
+═══════════════════════════════════════ */
+#mapa {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 8px;
+}
 
+#mapaSvgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* O SVG é portrait (1270x1792) mas as salas já estão na orientação correta.
+   height: 100% faz o SVG usar toda a altura disponível;
+   width: auto mantém a proporção. */
+#mapaSvgContainer svg {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    background: white;
+    border-radius: 10px;
+}
+
+.carregando-svg {
+    color: #aaa;
+    font-size: 15px;
+}
+
+
+/* ═══════════════════════════════════════
+   SALAS — animação de status
+═══════════════════════════════════════ */
+
+/* transição suave do rect */
+.sala-svg rect {
+    transition: fill .45s ease, stroke .45s ease, filter .45s ease;
+}
+
+/* ── LIVRE ── */
+.lab-room.livre rect.lab-rect {
+    fill: #e6fff1;
+    stroke: #00a63c;
+    stroke-width: 3.5;
+    filter: drop-shadow(0 0 10px rgba(0, 220, 80, .80));
+}
+.lab-room.livre .status-label  { fill: #007a2b; }
+.lab-room.livre .dado-label    { visibility: hidden; }
+
+/* ── OCUPADO ── */
+.lab-room.ocupado rect.lab-rect {
+    fill: #fff0f0;
+    stroke: #d50000;
+    stroke-width: 3.5;
+    filter: drop-shadow(0 0 16px rgba(255, 30, 30, .85));
+}
+.lab-room.ocupado .status-label { fill: #c00; }
+
+/* ── INDISPONÍVEL ── */
+.lab-room.indisponivel rect.lab-rect {
+    fill: #ebebeb;
+    stroke: #888;
+    stroke-width: 2;
+    filter: none;
+}
+.lab-room.indisponivel .status-label { fill: #777; }
+.lab-room.indisponivel .dado-label   { visibility: hidden; }
+
+
+/* ═══════════════════════════════════════
+   RODAPÉ
+═══════════════════════════════════════ */
 .rodape-senai {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
-
-    height: 70px;
-    background: radial-gradient(circle at center, var(--primary), #000b33);
+    height: 60px;
+    background: radial-gradient(circle at center, #1a3a8f, #000b33);
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 24px;
     color: white;
+    gap: 0;
 }
 
 .info-bloco {
@@ -102,25 +198,36 @@ main {
 }
 
 .icone-circulo {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.2);
-
+    background: rgba(255, 255, 255, .2);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 14px;
 }
 
 .textos {
     display: flex;
     flex-direction: column;
+    line-height: 1.3;
+}
+
+.titulo-footer {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.sub {
+    font-size: 11px;
+    color: #bcd;
 }
 
 .linha {
     width: 1px;
-    height: 30px;
-    background: rgba(255,255,255,0.3);
+    height: 28px;
+    background: rgba(255, 255, 255, .25);
     margin: 0 20px;
 }
 
@@ -129,270 +236,38 @@ main {
 }
 
 .logo-final img {
-    height: 30px;
-}
-
-/* =======================================================
-   PAINEL DO MAPA (SVG)
-======================================================= */
-
-.painel-mapa {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-}
-
-.status-turno {
-    color: white;
-    font-size: 22px;
-    margin-bottom: 15px;
-    flex-shrink: 0;
-}
-
-/* mapa + painel lateral lado a lado */
-.conteudo-mapa {
-    flex: 1;
-    display: flex;
-    gap: 20px;
-    min-height: 0;
-}
-
-#mapa {
-    flex: 3;
-    position: relative;
-    min-height: 0;
-
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 16px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding: 10px;
-}
-
-.carregando-svg {
-    color: #aaa;
-    font-size: 16px;
-}
-
-/* o SVG é injetado dentro de #mapaSvgContainer via JS (fetch + innerHTML) */
-#mapaSvgContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* a planta já está desenhada na orientação correta/horizontal:
-   apenas limitamos a altura para caber na tela, sem rotação */
-#mapaSvgContainer svg {
-    height: 100%;
-    width: auto;
-    max-width: 100%;
-    background: white;
-    border-radius: 10px;
+    height: 28px;
 }
 
 
-/* ===========================
-   SALAS DENTRO DO SVG
-=========================== */
-
-.sala-svg rect {
-    transition: fill .4s ease, stroke .4s ease, filter .4s ease;
-}
-
-.lab-room .status-label {
-    font-size: 11px;
-}
-
-/* estados (a mesma nomenclatura usada no restante do projeto) */
-
-.lab-room.livre rect.lab-rect {
-    fill: #eafff2;
-    stroke: #00a63c;
-    stroke-width: 3;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 102, .9));
-}
-.lab-room.livre .status-label {
-    fill: #00a63c;
-}
-
-.lab-room.ocupado rect.lab-rect {
-    fill: #ffecec;
-    stroke: #d50000;
-    stroke-width: 3;
-    filter: drop-shadow(0 0 16px rgba(255, 40, 40, .95));
-}
-.lab-room.ocupado .status-label {
-    fill: #d50000;
-}
-
-.lab-room.indisponivel rect.lab-rect {
-    fill: #ececec;
-    stroke: #888;
-    stroke-width: 2;
-    filter: none;
-}
-.lab-room.indisponivel .status-label {
-    fill: #888;
-}
-
-
-/* =======================================================
-   PAINEL LATERAL — DETALHES DAS SALAS OCUPADAS
-======================================================= */
-
-.detalhes-ocupacao {
-    flex: 1;
-    min-height: 0;
-
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    padding: 15px;
-
-    color: white;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.detalhes-ocupacao h3 {
-    margin: 0 0 12px;
-    font-size: 18px;
-    flex-shrink: 0;
-}
-
-.lista-ocupados {
-    flex: 1;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.item-ocupado {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-
-    background: rgba(255, 255, 255, 0.08);
-    border-left: 4px solid #d50000;
-    border-radius: 10px;
-    padding: 10px 12px;
-}
-
-.item-ocupado .icone {
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-
-    background: #0b1f3a;
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 8px;
-    font-size: 18px;
-}
-
-.item-ocupado .info {
-    display: flex;
-    flex-direction: column;
-    font-size: 13px;
-    line-height: 1.45;
-}
-
-.item-ocupado .info strong {
-    font-size: 14px;
-}
-
-.sem-ocupacao,
-.erro-ocupacao {
-    opacity: .75;
-    font-size: 14px;
-}
-
-.erro-ocupacao {
-    color: #ff8080;
-}
-
-
-/* ========================
+/* ═══════════════════════════════════════
    RESPONSIVO
-======================== */
-
+═══════════════════════════════════════ */
 @media (max-width: 900px) {
-    html, body {
-        overflow: auto;
-    }
+    html, body { overflow: auto; }
+    main { height: auto; padding: 10px; }
 
-    main {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .conteudo-mapa {
-        flex-direction: column;
-    }
-
-    #mapa, .detalhes-ocupacao {
-        flex: none;
-        height: 60vh;
+    #mapa {
+        height: 70vw;
+        min-height: 340px;
     }
 }
 
 @media (max-width: 600px) {
-
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .info-direita {
-        margin-left: 0;
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .rodape-senai {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-        gap: 10px;
-    }
-
-    .linha {
-        display: none;
-    }
+    header { flex-wrap: wrap; height: auto; padding: 10px; }
+    .info-direita { margin-left: 0; width: 100%; justify-content: space-between; }
+    .rodape-senai { flex-direction: column; height: auto; padding: 8px 12px; gap: 6px; }
+    .linha { display: none; }
+    .logo-final { margin-left: 0; }
 }
 
-/* TELAS GRANDES */
+/* ═══════════════════════════════════════
+   TELAS GRANDES (TV / 4K)
+═══════════════════════════════════════ */
 @media (min-width: 1600px) {
-
-    body {
-        font-size: 20px;
-    }
-
-    .titulo h1 {
-        font-size: 42px;
-    }
-
-    .data {
-        font-size: 36px;
-    }
-
-    .hora {
-        font-size: 50px;
-    }
-
-    .lab-room .status-label {
-        font-size: 13px;
-    }
+    header { height: 110px; }
+    .titulo h1 { font-size: 36px; }
+    .hora { font-size: 42px; }
+    main { height: calc(100vh - 110px - 70px); }
+    .rodape-senai { height: 70px; }
 }

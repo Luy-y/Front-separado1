@@ -1,72 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/login.css">
-
-    <title>Página de Login</title>
-
-    <!-- Configurações do PWA -->
-    <link rel="manifest" href="manifest.json" />
-    <meta name="theme-color" content="#0d6efd" /> <!-- Cor da barra do navegador -->
-
-    <!-- Tags para funcionar no iPhone (iOS) -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="InovaWeb" />
-
-    <!-- Ícones apontando para a pasta images -->
-    <link rel="apple-touch-icon" href="images/icon-192.png" />
-    <link rel="icon" type="image/png" href="images/icon-192.png" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Salas</title>
+  <link rel="stylesheet" href="css/painel.css">
 </head>
 
 <body>
 
-    <div class="background-glow"></div>
+  <header>
+    <img src="img/tela1.png" class="logo" />
 
-    <div class="login-card">
-
-        <div class="login-header">
-            <h2>Sistema de Gestão de Ambientes</h2>
-            <p>Faça login para continuar</p>
-        </div>
-
-        <div class="input-group">
-            <label>E-mail</label>
-            <input type="email" id="email" placeholder="Digite seu e-mail">
-        </div>
-
-        <div class="input-group">
-            <label>Senha</label>
-            <input type="password" id="password" placeholder="Digite sua senha">
-        </div>
-
-        <button onclick="efetuarLogin()">Entrar</button>
-
-        <div class="error" id="erro">
-            Usuário ou senha inválidos
-        </div>
-
-        <div class="footer">
-            <img src="img/tela1.png">
-        </div>
-
+    <div class="titulo">
+      <h1>PAINEL DE SALAS</h1>
+      <span>Encontre sua turma e sala</span>
     </div>
 
-    <script src="js/login.js"></script>
+    <div class="info-direita">
 
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-                .then(() => console.log("Pronto! Seu site agora é um App."))
-                .catch((err) => console.log("Erro ao criar o App:", err));
-        }
-    </script>
+      <div class="data">
+        <span class="icon">📅</span>
+        <div>
+          <strong id="dataAtual">--/--/----</strong><br>
+          <small id="diaSemana">---------</small>
+        </div>
+      </div>
+
+      <div class="hora">
+        <span class="icon">🕒</span>
+        <strong id="horaAtual">00:00</strong>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="painel-mapa">
+
+      <div class="status-turno">
+        <h3 id="statusTurno">Carregando turno...</h3>
+      </div>
+
+      <!-- SVG injetado via JS — o próprio mapa mostra os dados de ocupação -->
+      <div id="mapa">
+        <div id="mapaSvgContainer">
+          <p class="carregando-svg">Carregando mapa...</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="rodape-senai">
+
+    <div class="info-bloco">
+      <div class="icone-circulo">i</div>
+      <div class="textos">
+        <span class="titulo-footer">BEM-VINDO AO SENAI!</span>
+        <span class="sub">Tecnologia para transformar vidas.</span>
+      </div>
+    </div>
+
+    <div class="linha"></div>
+
+    <div class="info-bloco">
+      <div class="icone-circulo">📍</div>
+      <div class="textos">
+        <span class="titulo-footer">ENCONTRE SUA SALA</span>
+        <span class="sub">Mais agilidade, mais aprendizado.</span>
+      </div>
+    </div>
+
+    <div class="logo-final">
+      <img src="img/tela1.png">
+    </div>
+
+  </footer>
+
+  <script src="js/painel.js"></script>
 
 </body>
-
 </html>

@@ -1,146 +1,203 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 907 1280" preserveAspectRatio="xMidYMid meet" font-family="Arial, Helvetica, sans-serif">
-<rect x="0" y="0" width="907" height="1280" fill="white"/>
-<g transform="rotate(180 453.5 640.0)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1270 1792" preserveAspectRatio="xMidYMid meet" font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="1270" height="1792" fill="white"/>
+<g transform="rotate(180 635.0 896.0)">
 <g id="LAB209A" class="sala-svg lab-room indisponivel">
-<rect x="25" y="75" width="110" height="205" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
-<text x="80.0" y="193.5" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 80.0 193.5)">209 A</text>
-<text id="status-LAB209A" class="status-label" x="80.0" y="161.5" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 80.0 161.5)">INDISPONIVEL</text>
+<rect x="35.0" y="105.0" width="154.0" height="287.0" fill="white" stroke="#1f4e96" stroke-width="2.5" class="lab-rect"/>
+<text x="112.0" y="334.6" fill="#1f4e96" font-size="17" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 112.0 334.6)">209 A</text>
+<text id="status-LAB209A" class="status-label" x="112.0" y="282.9" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 112.0 282.9)">INDISPONÍVEL</text>
+<text id="turma-LAB209A" class="dado-label turma-label" visibility="hidden" x="112.0" y="231.3" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 112.0 231.3)"></text>
+<text id="instrutor-LAB209A" class="dado-label instrutor-label" visibility="hidden" x="112.0" y="191.1" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 112.0 191.1)"></text>
+<text id="horario-LAB209A" class="dado-label horario-label" visibility="hidden" x="112.0" y="153.8" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 112.0 153.8)"></text>
 </g>
 <g id="LAB208A" class="sala-svg lab-room indisponivel">
-<rect x="140" y="120" width="108" height="160" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
-<text x="194.0" y="216.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 194.0 216.0)">208 A</text>
-<text id="status-LAB208A" class="status-label" x="194.0" y="184.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 194.0 184.0)">INDISPONIVEL</text>
+<rect x="196.0" y="168.0" width="151.2" height="231.0" fill="white" stroke="#1f4e96" stroke-width="2.5" class="lab-rect"/>
+<text x="271.6" y="352.8" fill="#1f4e96" font-size="17" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 271.6 352.8)">208 A</text>
+<text id="status-LAB208A" class="status-label" x="271.6" y="311.2" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 271.6 311.2)">INDISPONÍVEL</text>
+<text id="turma-LAB208A" class="dado-label turma-label" visibility="hidden" x="271.6" y="269.6" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 271.6 269.6)"></text>
+<text id="instrutor-LAB208A" class="dado-label instrutor-label" visibility="hidden" x="271.6" y="237.3" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 271.6 237.3)"></text>
+<text id="horario-LAB208A" class="dado-label horario-label" visibility="hidden" x="271.6" y="207.3" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 271.6 207.3)"></text>
 </g>
 <g id="LAB207A" class="sala-svg lab-room indisponivel">
-<rect x="248" y="120" width="102" height="160" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
-<text x="299.0" y="216.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 299.0 216.0)">207 A</text>
-<text id="status-LAB207A" class="status-label" x="299.0" y="184.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 299.0 184.0)">INDISPONIVEL</text>
+<rect x="347.2" y="168.0" width="142.8" height="231.0" fill="white" stroke="#1f4e96" stroke-width="2.5" class="lab-rect"/>
+<text x="418.6" y="352.8" fill="#1f4e96" font-size="17" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 418.6 352.8)">207 A</text>
+<text id="status-LAB207A" class="status-label" x="418.6" y="311.2" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 418.6 311.2)">INDISPONÍVEL</text>
+<text id="turma-LAB207A" class="dado-label turma-label" visibility="hidden" x="418.6" y="269.6" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 418.6 269.6)"></text>
+<text id="instrutor-LAB207A" class="dado-label instrutor-label" visibility="hidden" x="418.6" y="237.3" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 418.6 237.3)"></text>
+<text id="horario-LAB207A" class="dado-label horario-label" visibility="hidden" x="418.6" y="207.3" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 418.6 207.3)"></text>
 </g>
 <g id="LAB206A" class="sala-svg lab-room indisponivel">
-<rect x="350" y="120" width="112" height="160" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
-<text x="406.0" y="216.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 406.0 216.0)">206 A</text>
-<text id="status-LAB206A" class="status-label" x="406.0" y="184.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 406.0 184.0)">INDISPONIVEL</text>
+<rect x="490.0" y="168.0" width="156.8" height="231.0" fill="white" stroke="#1f4e96" stroke-width="2.5" class="lab-rect"/>
+<text x="568.4" y="352.8" fill="#1f4e96" font-size="17" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 568.4 352.8)">206 A</text>
+<text id="status-LAB206A" class="status-label" x="568.4" y="311.2" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 568.4 311.2)">INDISPONÍVEL</text>
+<text id="turma-LAB206A" class="dado-label turma-label" visibility="hidden" x="568.4" y="269.6" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 568.4 269.6)"></text>
+<text id="instrutor-LAB206A" class="dado-label instrutor-label" visibility="hidden" x="568.4" y="237.3" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 568.4 237.3)"></text>
+<text id="horario-LAB206A" class="dado-label horario-label" visibility="hidden" x="568.4" y="207.3" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 568.4 207.3)"></text>
 </g>
 <g class="sala-svg sala-fixa">
-<rect x="462" y="70" width="90" height="155" fill="white" stroke="#1a1a1a" stroke-width="1.6" />
-<text x="507.0" y="147.5" fill="#1a1a1a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 507.0 147.5)">PORTARIA</text>
+<rect x="646.8" y="98.0" width="126.0" height="217.0" fill="white" stroke="#1a1a1a" stroke-width="1.8" />
+<text x="709.8" y="206.5" fill="#1a1a1a" font-size="13" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 709.8 206.5)">PORTARIA</text>
 </g>
 <g id="LAB205A" class="sala-svg lab-room indisponivel">
-<rect x="552" y="70" width="108" height="160" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
-<text x="606.0" y="166.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 606.0 166.0)">205 A</text>
-<text id="status-LAB205A" class="status-label" x="606.0" y="134.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 606.0 134.0)">INDISPONIVEL</text>
+<rect x="772.8" y="98.0" width="151.2" height="231.0" fill="white" stroke="#1f4e96" stroke-width="2.5" class="lab-rect"/>
+<text x="848.4" y="282.8" fill="#1f4e96" font-size="17" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 848.4 282.8)">205 A</text>
+<text id="status-LAB205A" class="status-label" x="848.4" y="241.2" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 848.4 241.2)">INDISPONÍVEL</text>
+<text id="turma-LAB205A" class="dado-label turma-label" visibility="hidden" x="848.4" y="199.6" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 848.4 199.6)"></text>
+<text id="instrutor-LAB205A" class="dado-label instrutor-label" visibility="hidden" x="848.4" y="167.3" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 848.4 167.3)"></text>
+<text id="horario-LAB205A" class="dado-label horario-label" visibility="hidden" x="848.4" y="137.3" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 848.4 137.3)"></text>
 </g>
 <g id="LAB204A" class="sala-svg lab-room indisponivel">
-<rect x="660" y="70" width="110" height="160" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
-<text x="715.0" y="166.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 715.0 166.0)">204 A</text>
-<text id="status-LAB204A" class="status-label" x="715.0" y="134.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 715.0 134.0)">INDISPONIVEL</text>
+<rect x="924.0" y="98.0" width="154.0" height="231.0" fill="white" stroke="#1f4e96" stroke-width="2.5" class="lab-rect"/>
+<text x="1001.0" y="282.8" fill="#1f4e96" font-size="17" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 1001.0 282.8)">204 A</text>
+<text id="status-LAB204A" class="status-label" x="1001.0" y="241.2" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 1001.0 241.2)">INDISPONÍVEL</text>
+<text id="turma-LAB204A" class="dado-label turma-label" visibility="hidden" x="1001.0" y="199.6" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 1001.0 199.6)"></text>
+<text id="instrutor-LAB204A" class="dado-label instrutor-label" visibility="hidden" x="1001.0" y="167.3" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 1001.0 167.3)"></text>
+<text id="horario-LAB204A" class="dado-label horario-label" visibility="hidden" x="1001.0" y="137.3" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 1001.0 137.3)"></text>
 </g>
 <g id="LAB203A" class="sala-svg lab-room indisponivel">
-<rect x="770" y="70" width="110" height="160" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
-<text x="825.0" y="166.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 825.0 166.0)">203 A</text>
-<text id="status-LAB203A" class="status-label" x="825.0" y="134.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 825.0 134.0)">INDISPONIVEL</text>
+<rect x="1078.0" y="98.0" width="154.0" height="231.0" fill="white" stroke="#1f4e96" stroke-width="2.5" class="lab-rect"/>
+<text x="1155.0" y="282.8" fill="#1f4e96" font-size="17" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 1155.0 282.8)">203 A</text>
+<text id="status-LAB203A" class="status-label" x="1155.0" y="241.2" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 1155.0 241.2)">INDISPONÍVEL</text>
+<text id="turma-LAB203A" class="dado-label turma-label" visibility="hidden" x="1155.0" y="199.6" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 1155.0 199.6)"></text>
+<text id="instrutor-LAB203A" class="dado-label instrutor-label" visibility="hidden" x="1155.0" y="167.3" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 1155.0 167.3)"></text>
+<text id="horario-LAB203A" class="dado-label horario-label" visibility="hidden" x="1155.0" y="137.3" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 1155.0 137.3)"></text>
 </g>
 <g class="sala-svg sala-fixa">
-<rect x="552" y="285" width="133" height="60" fill="white" stroke="#1f4e96" stroke-width="1.6" />
-<text x="618.5" y="315.0" fill="#1f4e96" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 618.5 315.0)">BANHEIROS</text>
+<rect x="772.8" y="399.0" width="186.2" height="86.8" fill="white" stroke="#1f4e96" stroke-width="1.8" />
+<text x="865.9" y="442.4" fill="#1f4e96" font-size="13" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 865.9 442.4)">BANHEIROS</text>
 </g>
 <g id="LAB202A" class="sala-svg lab-room indisponivel">
-<rect x="522" y="345" width="163" height="120" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
-<text x="603.5" y="421.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 603.5 421.0)">202 A</text>
-<text id="status-LAB202A" class="status-label" x="603.5" y="389.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 603.5 389.0)">INDISPONIVEL</text>
+<rect x="730.8" y="485.8" width="228.2" height="182.0" fill="white" stroke="#1f4e96" stroke-width="2.5" class="lab-rect"/>
+<text x="844.9" y="631.4" fill="#1f4e96" font-size="17" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 844.9 631.4)">202 A</text>
+<text id="status-LAB202A" class="status-label" x="844.9" y="598.6" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 844.9 598.6)">INDISPONÍVEL</text>
+<text id="turma-LAB202A" class="dado-label turma-label" visibility="hidden" x="844.9" y="565.9" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 844.9 565.9)"></text>
+<text id="instrutor-LAB202A" class="dado-label instrutor-label" visibility="hidden" x="844.9" y="540.4" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 844.9 540.4)"></text>
+<text id="horario-LAB202A" class="dado-label horario-label" visibility="hidden" x="844.9" y="516.7" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 844.9 516.7)"></text>
 </g>
 <g id="LAB201A" class="sala-svg lab-room indisponivel">
-<rect x="522" y="465" width="163" height="125" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
-<text x="603.5" y="543.5" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 603.5 543.5)">201 A</text>
-<text id="status-LAB201A" class="status-label" x="603.5" y="511.5" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 603.5 511.5)">INDISPONIVEL</text>
+<rect x="730.8" y="667.8" width="228.2" height="189.0" fill="white" stroke="#1f4e96" stroke-width="2.5" class="lab-rect"/>
+<text x="844.9" y="819.0" fill="#1f4e96" font-size="17" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 844.9 819.0)">201 A</text>
+<text id="status-LAB201A" class="status-label" x="844.9" y="785.0" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 844.9 785.0)">INDISPONÍVEL</text>
+<text id="turma-LAB201A" class="dado-label turma-label" visibility="hidden" x="844.9" y="751.0" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 844.9 751.0)"></text>
+<text id="instrutor-LAB201A" class="dado-label instrutor-label" visibility="hidden" x="844.9" y="724.5" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 844.9 724.5)"></text>
+<text id="horario-LAB201A" class="dado-label horario-label" visibility="hidden" x="844.9" y="699.9" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 844.9 699.9)"></text>
 </g>
-<polyline points="462,280 462,590 25,590" fill="none" stroke="#1f4e96" stroke-width="1.6"/>
-<polyline points="462,280 552,280" fill="none" stroke="#1f4e96" stroke-width="1.6"/>
-<rect x="405" y="335" width="57" height="143" fill="white" stroke="#1f4e96" stroke-width="1.4" />
-<line x1="405" y1="346.0" x2="462" y2="346.0" stroke="#1f4e96" stroke-width="1.2"/>
-<line x1="405" y1="357.0" x2="462" y2="357.0" stroke="#1f4e96" stroke-width="1.2"/>
-<line x1="405" y1="368.0" x2="462" y2="368.0" stroke="#1f4e96" stroke-width="1.2"/>
-<line x1="405" y1="379.0" x2="462" y2="379.0" stroke="#1f4e96" stroke-width="1.2"/>
-<line x1="405" y1="390.0" x2="462" y2="390.0" stroke="#1f4e96" stroke-width="1.2"/>
-<line x1="405" y1="401.0" x2="462" y2="401.0" stroke="#1f4e96" stroke-width="1.2"/>
-<line x1="405" y1="412.0" x2="462" y2="412.0" stroke="#1f4e96" stroke-width="1.2"/>
-<line x1="405" y1="423.0" x2="462" y2="423.0" stroke="#1f4e96" stroke-width="1.2"/>
-<line x1="405" y1="434.0" x2="462" y2="434.0" stroke="#1f4e96" stroke-width="1.2"/>
-<line x1="405" y1="445.0" x2="462" y2="445.0" stroke="#1f4e96" stroke-width="1.2"/>
-<line x1="405" y1="456.0" x2="462" y2="456.0" stroke="#1f4e96" stroke-width="1.2"/>
-<line x1="405" y1="467.0" x2="462" y2="467.0" stroke="#1f4e96" stroke-width="1.2"/>
-<rect x="270" y="590" width="267" height="95" fill="white" stroke="#1a1a1a" stroke-width="1.4"/>
-<rect x="330" y="660" width="75" height="120" fill="white" stroke="#1a1a1a" stroke-width="1.4"/>
-<rect x="300" y="605" width="50" height="45" fill="white" stroke="#1a1a1a" stroke-width="1.4" />
-<line x1="307.14285714285717" y1="605" x2="307.14285714285717" y2="650" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="314.2857142857143" y1="605" x2="314.2857142857143" y2="650" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="321.42857142857144" y1="605" x2="321.42857142857144" y2="650" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="328.57142857142856" y1="605" x2="328.57142857142856" y2="650" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="335.7142857142857" y1="605" x2="335.7142857142857" y2="650" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="342.8571428571429" y1="605" x2="342.8571428571429" y2="650" stroke="#1a1a1a" stroke-width="1.2"/>
-<rect x="330" y="660" width="75" height="50" fill="white" stroke="#1a1a1a" stroke-width="1.4" />
-<line x1="330" y1="665.0" x2="405" y2="665.0" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="330" y1="670.0" x2="405" y2="670.0" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="330" y1="675.0" x2="405" y2="675.0" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="330" y1="680.0" x2="405" y2="680.0" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="330" y1="685.0" x2="405" y2="685.0" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="330" y1="690.0" x2="405" y2="690.0" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="330" y1="695.0" x2="405" y2="695.0" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="330" y1="700.0" x2="405" y2="700.0" stroke="#1a1a1a" stroke-width="1.2"/>
-<line x1="330" y1="705.0" x2="405" y2="705.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<polyline points="646.8,392.0 646.8,826.0 35.0,826.0" fill="none" stroke="#1f4e96" stroke-width="2.2"/>
+<polyline points="646.8,392.0 772.8,392.0" fill="none" stroke="#1f4e96" stroke-width="2.2"/>
+<rect x="567.0" y="469.0" width="79.8" height="214.2" fill="white" stroke="#1f4e96" stroke-width="1.8" />
+<line x1="567.0" y1="485.5" x2="646.8" y2="485.5" stroke="#1f4e96" stroke-width="1.4"/>
+<line x1="567.0" y1="502.0" x2="646.8" y2="502.0" stroke="#1f4e96" stroke-width="1.4"/>
+<line x1="567.0" y1="518.4" x2="646.8" y2="518.4" stroke="#1f4e96" stroke-width="1.4"/>
+<line x1="567.0" y1="534.9" x2="646.8" y2="534.9" stroke="#1f4e96" stroke-width="1.4"/>
+<line x1="567.0" y1="551.4" x2="646.8" y2="551.4" stroke="#1f4e96" stroke-width="1.4"/>
+<line x1="567.0" y1="567.9" x2="646.8" y2="567.9" stroke="#1f4e96" stroke-width="1.4"/>
+<line x1="567.0" y1="584.3" x2="646.8" y2="584.3" stroke="#1f4e96" stroke-width="1.4"/>
+<line x1="567.0" y1="600.8" x2="646.8" y2="600.8" stroke="#1f4e96" stroke-width="1.4"/>
+<line x1="567.0" y1="617.3" x2="646.8" y2="617.3" stroke="#1f4e96" stroke-width="1.4"/>
+<line x1="567.0" y1="633.8" x2="646.8" y2="633.8" stroke="#1f4e96" stroke-width="1.4"/>
+<line x1="567.0" y1="650.2" x2="646.8" y2="650.2" stroke="#1f4e96" stroke-width="1.4"/>
+<line x1="567.0" y1="666.7" x2="646.8" y2="666.7" stroke="#1f4e96" stroke-width="1.4"/>
+<rect x="378.0" y="826.0" width="373.8" height="133.0" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
+<rect x="462.0" y="924.0" width="105.0" height="168.0" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
+<rect x="420.0" y="847.0" width="70.0" height="63.0" fill="white" stroke="#1a1a1a" stroke-width="1.8" />
+<line x1="430.0" y1="847.0" x2="430.0" y2="910.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="440.0" y1="847.0" x2="440.0" y2="910.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="450.0" y1="847.0" x2="450.0" y2="910.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="460.0" y1="847.0" x2="460.0" y2="910.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="470.0" y1="847.0" x2="470.0" y2="910.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="480.0" y1="847.0" x2="480.0" y2="910.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<rect x="462.0" y="924.0" width="105.0" height="70.0" fill="white" stroke="#1a1a1a" stroke-width="1.8" />
+<line x1="462.0" y1="931.0" x2="567.0" y2="931.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="462.0" y1="938.0" x2="567.0" y2="938.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="462.0" y1="945.0" x2="567.0" y2="945.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="462.0" y1="952.0" x2="567.0" y2="952.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="462.0" y1="959.0" x2="567.0" y2="959.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="462.0" y1="966.0" x2="567.0" y2="966.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="462.0" y1="973.0" x2="567.0" y2="973.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="462.0" y1="980.0" x2="567.0" y2="980.0" stroke="#1a1a1a" stroke-width="1.2"/>
+<line x1="462.0" y1="987.0" x2="567.0" y2="987.0" stroke="#1a1a1a" stroke-width="1.2"/>
 <g id="LABMAKER" class="sala-svg lab-room indisponivel">
-<rect x="25" y="625" width="233" height="145" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
-<text x="141.5" y="713.5" fill="#1a1a1a" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 141.5 713.5)">LAB MAKER</text>
-<text id="status-LABMAKER" class="status-label" x="141.5" y="681.5" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 141.5 681.5)">INDISPONIVEL</text>
+<rect x="35.0" y="875.0" width="326.2" height="217.0" fill="white" stroke="#1a1a1a" stroke-width="2.5" class="lab-rect"/>
+<text x="198.1" y="1048.6" fill="#1a1a1a" font-size="17" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 198.1 1048.6)">LAB MAKER</text>
+<text id="status-LABMAKER" class="status-label" x="198.1" y="1009.5" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 198.1 1009.5)">INDISPONÍVEL</text>
+<text id="turma-LABMAKER" class="dado-label turma-label" visibility="hidden" x="198.1" y="970.5" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 198.1 970.5)"></text>
+<text id="instrutor-LABMAKER" class="dado-label instrutor-label" visibility="hidden" x="198.1" y="940.1" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 198.1 940.1)"></text>
+<text id="horario-LABMAKER" class="dado-label horario-label" visibility="hidden" x="198.1" y="911.9" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 198.1 911.9)"></text>
 </g>
 <g id="LAB203B" class="sala-svg lab-room indisponivel">
-<rect x="25" y="770" width="135" height="85" fill="white" stroke="#7a1f2b" stroke-width="2" class="lab-rect"/>
-<text x="92.5" y="828.5" fill="#7a1f2b" font-size="15" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 92.5 828.5)">203 B</text>
-<text id="status-LAB203B" class="status-label" x="92.5" y="796.5" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 92.5 796.5)">INDISPONIVEL</text>
+<rect x="35.0" y="1092.0" width="189.0" height="147.0" fill="white" stroke="#7a1f2b" stroke-width="2.5" class="lab-rect"/>
+<text x="129.5" y="1209.6" fill="#7a1f2b" font-size="15" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1209.6)">203 B</text>
+<text id="status-LAB203B" class="status-label" x="129.5" y="1183.1" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1183.1)">INDISPONÍVEL</text>
+<text id="turma-LAB203B" class="dado-label turma-label" visibility="hidden" x="129.5" y="1156.7" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1156.7)"></text>
+<text id="instrutor-LAB203B" class="dado-label instrutor-label" visibility="hidden" x="129.5" y="1136.1" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1136.1)"></text>
+<text id="horario-LAB203B" class="dado-label horario-label" visibility="hidden" x="129.5" y="1117.0" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1117.0)"></text>
 </g>
 <g id="LAB204B" class="sala-svg lab-room indisponivel">
-<rect x="25" y="855" width="135" height="90" fill="white" stroke="#7a1f2b" stroke-width="2" class="lab-rect"/>
-<text x="92.5" y="916.0" fill="#7a1f2b" font-size="15" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 92.5 916.0)">204 B</text>
-<text id="status-LAB204B" class="status-label" x="92.5" y="884.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 92.5 884.0)">INDISPONIVEL</text>
+<rect x="35.0" y="1239.0" width="189.0" height="147.0" fill="white" stroke="#7a1f2b" stroke-width="2.5" class="lab-rect"/>
+<text x="129.5" y="1356.6" fill="#7a1f2b" font-size="15" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1356.6)">204 B</text>
+<text id="status-LAB204B" class="status-label" x="129.5" y="1330.1" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1330.1)">INDISPONÍVEL</text>
+<text id="turma-LAB204B" class="dado-label turma-label" visibility="hidden" x="129.5" y="1303.7" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1303.7)"></text>
+<text id="instrutor-LAB204B" class="dado-label instrutor-label" visibility="hidden" x="129.5" y="1283.1" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1283.1)"></text>
+<text id="horario-LAB204B" class="dado-label horario-label" visibility="hidden" x="129.5" y="1264.0" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1264.0)"></text>
 </g>
 <g id="LAB205B" class="sala-svg lab-room indisponivel">
-<rect x="25" y="945" width="135" height="85" fill="white" stroke="#7a1f2b" stroke-width="2" class="lab-rect"/>
-<text x="92.5" y="1003.5" fill="#7a1f2b" font-size="15" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 92.5 1003.5)">205 B</text>
-<text id="status-LAB205B" class="status-label" x="92.5" y="971.5" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 92.5 971.5)">INDISPONIVEL</text>
+<rect x="35.0" y="1386.0" width="189.0" height="147.0" fill="white" stroke="#7a1f2b" stroke-width="2.5" class="lab-rect"/>
+<text x="129.5" y="1503.6" fill="#7a1f2b" font-size="15" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1503.6)">205 B</text>
+<text id="status-LAB205B" class="status-label" x="129.5" y="1477.1" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1477.1)">INDISPONÍVEL</text>
+<text id="turma-LAB205B" class="dado-label turma-label" visibility="hidden" x="129.5" y="1450.7" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1450.7)"></text>
+<text id="instrutor-LAB205B" class="dado-label instrutor-label" visibility="hidden" x="129.5" y="1430.1" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1430.1)"></text>
+<text id="horario-LAB205B" class="dado-label horario-label" visibility="hidden" x="129.5" y="1411.0" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1411.0)"></text>
 </g>
 <g class="sala-svg sala-fixa">
-<rect x="205" y="770" width="137" height="55" fill="white" stroke="#1a1a1a" stroke-width="1.6" />
-<text x="273.5" y="797.5" fill="#1a1a1a" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 273.5 797.5)">BANHEIROS</text>
+<rect x="287.0" y="1092.0" width="191.8" height="79.8" fill="white" stroke="#1a1a1a" stroke-width="1.8" />
+<text x="382.9" y="1131.9" fill="#1a1a1a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 382.9 1131.9)">BANHEIROS</text>
 </g>
 <g id="ELETROHIDRO" class="sala-svg lab-room indisponivel">
-<rect x="205" y="825" width="137" height="105" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
-<text x="273.5" y="893.5" fill="#1a1a1a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 273.5 893.5)">ELETROHIDRO</text>
-<text id="status-ELETROHIDRO" class="status-label" x="273.5" y="861.5" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 273.5 861.5)">INDISPONIVEL</text>
+<rect x="287.0" y="1171.8" width="191.8" height="161.0" fill="white" stroke="#1a1a1a" stroke-width="2.5" class="lab-rect"/>
+<text x="382.9" y="1300.6" fill="#1a1a1a" font-size="13" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 382.9 1300.6)">ELETROHIDRO</text>
+<text id="status-ELETROHIDRO" class="status-label" x="382.9" y="1271.6" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 382.9 1271.6)">INDISPONÍVEL</text>
+<text id="turma-ELETROHIDRO" class="dado-label turma-label" visibility="hidden" x="382.9" y="1242.6" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 382.9 1242.6)"></text>
+<text id="instrutor-ELETROHIDRO" class="dado-label instrutor-label" visibility="hidden" x="382.9" y="1220.1" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 382.9 1220.1)"></text>
+<text id="horario-ELETROHIDRO" class="dado-label horario-label" visibility="hidden" x="382.9" y="1199.2" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 382.9 1199.2)"></text>
 </g>
 <g id="ELETRICA" class="sala-svg lab-room indisponivel">
-<rect x="205" y="930" width="137" height="100" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
-<text x="273.5" y="996.0" fill="#1a1a1a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 273.5 996.0)">ELETRICA</text>
-<text id="status-ELETRICA" class="status-label" x="273.5" y="964.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 273.5 964.0)">INDISPONIVEL</text>
+<rect x="287.0" y="1332.8" width="191.8" height="161.0" fill="white" stroke="#1a1a1a" stroke-width="2.5" class="lab-rect"/>
+<text x="382.9" y="1461.6" fill="#1a1a1a" font-size="13" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 382.9 1461.6)">ELÉTRICA</text>
+<text id="status-ELETRICA" class="status-label" x="382.9" y="1432.6" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 382.9 1432.6)">INDISPONÍVEL</text>
+<text id="turma-ELETRICA" class="dado-label turma-label" visibility="hidden" x="382.9" y="1403.6" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 382.9 1403.6)"></text>
+<text id="instrutor-ELETRICA" class="dado-label instrutor-label" visibility="hidden" x="382.9" y="1381.1" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 382.9 1381.1)"></text>
+<text id="horario-ELETRICA" class="dado-label horario-label" visibility="hidden" x="382.9" y="1360.2" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 382.9 1360.2)"></text>
 </g>
 <g id="COSTURA" class="sala-svg lab-room indisponivel">
-<rect x="25" y="1030" width="135" height="200" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
-<text x="92.5" y="1146.0" fill="#1a1a1a" font-size="14" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 92.5 1146.0)">COSTURA</text>
-<text id="status-COSTURA" class="status-label" x="92.5" y="1114.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 92.5 1114.0)">INDISPONIVEL</text>
+<rect x="35.0" y="1533.0" width="189.0" height="308.0" fill="white" stroke="#1a1a1a" stroke-width="2.5" class="lab-rect"/>
+<text x="129.5" y="1779.4" fill="#1a1a1a" font-size="15" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1779.4)">COSTURA</text>
+<text id="status-COSTURA" class="status-label" x="129.5" y="1724.0" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1724.0)">INDISPONÍVEL</text>
+<text id="turma-COSTURA" class="dado-label turma-label" visibility="hidden" x="129.5" y="1668.5" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1668.5)"></text>
+<text id="instrutor-COSTURA" class="dado-label instrutor-label" visibility="hidden" x="129.5" y="1625.4" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1625.4)"></text>
+<text id="horario-COSTURA" class="dado-label horario-label" visibility="hidden" x="129.5" y="1585.4" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 129.5 1585.4)"></text>
 </g>
 <g id="MODELAGEM" class="sala-svg lab-room indisponivel">
-<rect x="160" y="1100" width="65" height="130" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
-<text x="192.5" y="1181.0" fill="#1a1a1a" font-size="10" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 192.5 1181.0)">MODELAGEM</text>
-<text id="status-MODELAGEM" class="status-label" x="192.5" y="1149.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 192.5 1149.0)">INDISPONIVEL</text>
+<rect x="224.0" y="1603.0" width="91.0" height="238.0" fill="white" stroke="#1a1a1a" stroke-width="2.5" class="lab-rect"/>
+<text x="269.5" y="1793.4" fill="#1a1a1a" font-size="10" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 269.5 1793.4)">MODELAGEM</text>
+<text id="status-MODELAGEM" class="status-label" x="269.5" y="1750.6" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 269.5 1750.6)">INDISPONÍVEL</text>
+<text id="turma-MODELAGEM" class="dado-label turma-label" visibility="hidden" x="269.5" y="1707.7" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 269.5 1707.7)"></text>
+<text id="instrutor-MODELAGEM" class="dado-label instrutor-label" visibility="hidden" x="269.5" y="1674.4" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 269.5 1674.4)"></text>
+<text id="horario-MODELAGEM" class="dado-label horario-label" visibility="hidden" x="269.5" y="1643.5" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 269.5 1643.5)"></text>
 </g>
 <g id="PREDIAL" class="sala-svg lab-room indisponivel">
-<rect x="225" y="1100" width="60" height="130" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
-<text x="255.0" y="1181.0" fill="#1a1a1a" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 255.0 1181.0)">PREDIAL</text>
-<text id="status-PREDIAL" class="status-label" x="255.0" y="1149.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 255.0 1149.0)">INDISPONIVEL</text>
+<rect x="315.0" y="1603.0" width="84.0" height="238.0" fill="white" stroke="#1a1a1a" stroke-width="2.5" class="lab-rect"/>
+<text x="357.0" y="1793.4" fill="#1a1a1a" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 357.0 1793.4)">PREDIAL</text>
+<text id="status-PREDIAL" class="status-label" x="357.0" y="1750.6" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 357.0 1750.6)">INDISPONÍVEL</text>
+<text id="turma-PREDIAL" class="dado-label turma-label" visibility="hidden" x="357.0" y="1707.7" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 357.0 1707.7)"></text>
+<text id="instrutor-PREDIAL" class="dado-label instrutor-label" visibility="hidden" x="357.0" y="1674.4" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 357.0 1674.4)"></text>
+<text id="horario-PREDIAL" class="dado-label horario-label" visibility="hidden" x="357.0" y="1643.5" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 357.0 1643.5)"></text>
 </g>
 <g id="INDUSTRIAL" class="sala-svg lab-room indisponivel">
-<rect x="285" y="1100" width="60" height="130" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
-<text x="315.0" y="1181.0" fill="#1a1a1a" font-size="10" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 315.0 1181.0)">INDUSTRIAL</text>
-<text id="status-INDUSTRIAL" class="status-label" x="315.0" y="1149.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 315.0 1149.0)">INDISPONIVEL</text>
+<rect x="399.0" y="1603.0" width="84.0" height="238.0" fill="white" stroke="#1a1a1a" stroke-width="2.5" class="lab-rect"/>
+<text x="441.0" y="1793.4" fill="#1a1a1a" font-size="10" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 441.0 1793.4)">INDUSTRIAL</text>
+<text id="status-INDUSTRIAL" class="status-label" x="441.0" y="1750.6" fill="#999" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 441.0 1750.6)">INDISPONÍVEL</text>
+<text id="turma-INDUSTRIAL" class="dado-label turma-label" visibility="hidden" x="441.0" y="1707.7" fill="#0b1f3a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 441.0 1707.7)"></text>
+<text id="instrutor-INDUSTRIAL" class="dado-label instrutor-label" visibility="hidden" x="441.0" y="1674.4" fill="#1a3d5c" font-size="11" font-weight="normal" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 441.0 1674.4)"></text>
+<text id="horario-INDUSTRIAL" class="dado-label horario-label" visibility="hidden" x="441.0" y="1643.5" fill="#1a3d5c" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(180 441.0 1643.5)"></text>
 </g>
 </g>
 </svg>
