@@ -1,3 +1,43 @@
+/* ===========================================================
+   PAINEL DE SALAS — SENAI
+   Redesenho para exibição em telão (digital signage)
+   Paleta e tipografia alinhadas à identidade SENAI
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* cores de marca */
+    --azul-senai: #1f4e96;
+    --azul-senai-claro: #3f78d1;
+    --laranja-senai: #f4692a;
+
+    /* fundo / superfícies */
+    --fundo-base: #050e22;
+    --fundo-degrade: #0a1a3d;
+    --superficie: rgba(255, 255, 255, 0.045);
+    --superficie-forte: rgba(255, 255, 255, 0.08);
+    --borda-suave: rgba(255, 255, 255, 0.09);
+    --borda-azul: rgba(63, 120, 209, 0.35);
+
+    /* texto */
+    --texto-alto: #f4f7fc;
+    --texto-medio: #aab6d3;
+    --texto-baixo: #718097;
+
+    /* status */
+    --cor-livre: #22c55e;
+    --cor-ocupado: #ef4444;
+    --cor-indisponivel: #64748b;
+
+    /* tipografia */
+    --fonte-display: 'Rajdhani', 'Arial Narrow', Arial, sans-serif;
+    --fonte-corpo: 'Inter', Arial, sans-serif;
+
+    --raio: 18px;
+    --raio-pequeno: 10px;
+}
+
 /* RESET */
 * {
     box-sizing: border-box;
@@ -10,103 +50,147 @@ html, body {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000b33;
+    font-family: var(--fonte-corpo);
+    color: var(--texto-alto);
+    background:
+        radial-gradient(ellipse 1200px 700px at 15% -10%, rgba(63, 120, 209, 0.20), transparent 60%),
+        radial-gradient(ellipse 900px 600px at 100% 110%, rgba(244, 105, 42, 0.10), transparent 55%),
+        var(--fundo-base);
 }
 
 
-/* HEADER */
+/* ===========================================================
+   HEADER
+=========================================================== */
 
 header {
     height: 100px;
-    background: radial-gradient(circle at center, var(--primary), #000b33);
-    color: white;
+    background: linear-gradient(180deg, var(--fundo-degrade) 0%, var(--fundo-base) 100%);
+    border-bottom: 1px solid var(--borda-azul);
+    color: var(--texto-alto);
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 10px 20px;
+    gap: 22px;
+    padding: 0 32px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    position: relative;
+    z-index: 2;
 }
 
 .logo {
-    height: 50px;
+    height: 44px;
+    padding: 8px 14px;
+    background: #ffffff;
+    border-radius: var(--raio-pequeno);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 .titulo {
     display: flex;
     flex-direction: column;
+    gap: 2px;
 }
 
 .titulo h1 {
     margin: 0;
-    font-size: clamp(18px, 3vw, 28px);
+    font-family: var(--fonte-display);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    font-size: clamp(20px, 2.6vw, 30px);
+    color: var(--texto-alto);
 }
 
 .titulo span {
-    font-size: 14px;
-    color: #ccc;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--texto-medio);
 }
 
-/* DIREITA */
+
+/* DIREITA — DATA / HORA */
 .info-direita {
     margin-left: auto;
     display: flex;
-    align-items: center;
-    gap: 20px;
+    align-items: stretch;
+    gap: 18px;
 }
 
 .data, .hora {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+    padding: 8px 18px;
+    background: var(--superficie);
+    border: 1px solid var(--borda-suave);
+    border-radius: var(--raio-pequeno);
 }
 
-.data { font-size: clamp(16px, 2vw, 28px); }
-.hora { font-size: clamp(20px, 3vw, 36px); }
+.data strong, .hora strong {
+    font-family: var(--fonte-display);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.03em;
+}
+
+.data { font-size: clamp(14px, 1.6vw, 18px); }
+.data strong { font-size: clamp(16px, 1.9vw, 20px); }
+.data small { color: var(--texto-medio); font-weight: 500; }
+
+.hora { font-size: clamp(20px, 2.4vw, 30px); border-color: var(--borda-azul); }
+.hora strong { color: var(--laranja-senai); }
 
 .icon {
-    font-size: clamp(18px, 3vw, 36px);
+    font-size: clamp(18px, 2.4vw, 28px);
+    opacity: 0.9;
 }
 
 
-/* MAIN */
+/* ===========================================================
+   MAIN
+=========================================================== */
 
 main {
     display: flex;
     gap: 20px;
-    padding: 20px;
-
-    /* 🔥 ALTURA EXATA DA TELA */
-    height: calc(100vh - 170px);
+    padding: 22px 28px;
+    height: calc(100vh - 172px);
 }
 
 
-/* RODAPÉ */
+/* ===========================================================
+   RODAPÉ
+=========================================================== */
 
 .rodape-senai {
     position: fixed;
     bottom: 0;
     width: 100%;
-
-    height: 70px;
-    background: radial-gradient(circle at center, var(--primary), #000b33);
+    height: 72px;
+    background: linear-gradient(0deg, var(--fundo-degrade) 0%, var(--fundo-base) 100%);
+    border-top: 1px solid var(--borda-azul);
+    box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.35);
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    color: white;
+    padding: 0 32px;
+    color: var(--texto-alto);
+    z-index: 2;
 }
 
 .info-bloco {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 14px;
 }
 
 .icone-circulo {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.2);
-
+    background: rgba(63, 120, 209, 0.18);
+    border: 1px solid var(--borda-azul);
+    color: var(--azul-senai-claro);
+    font-weight: 700;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,13 +199,26 @@ main {
 .textos {
     display: flex;
     flex-direction: column;
+    line-height: 1.35;
+}
+
+.textos .titulo {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--texto-alto);
+}
+
+.textos .sub {
+    font-size: 12.5px;
+    color: var(--texto-medio);
 }
 
 .linha {
     width: 1px;
-    height: 30px;
-    background: rgba(255,255,255,0.3);
-    margin: 0 20px;
+    height: 32px;
+    background: var(--borda-suave);
+    margin: 0 26px;
 }
 
 .logo-final {
@@ -129,12 +226,16 @@ main {
 }
 
 .logo-final img {
-    height: 30px;
+    height: 26px;
+    padding: 6px 12px;
+    background: #ffffff;
+    border-radius: 8px;
 }
 
-/* =======================================================
+
+/* ===========================================================
    PAINEL DO MAPA (SVG)
-======================================================= */
+=========================================================== */
 
 .painel-mapa {
     flex: 1;
@@ -144,10 +245,41 @@ main {
 }
 
 .status-turno {
-    color: white;
-    font-size: 22px;
-    margin-bottom: 15px;
     flex-shrink: 0;
+    margin-bottom: 16px;
+}
+
+.status-turno h3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 9px 20px;
+    font-family: var(--fonte-display);
+    font-weight: 600;
+    font-size: clamp(16px, 1.8vw, 21px);
+    letter-spacing: 0.03em;
+    color: var(--texto-alto);
+    background: var(--superficie);
+    border: 1px solid var(--borda-azul);
+    border-radius: 999px;
+}
+
+.status-turno h3::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--laranja-senai);
+    box-shadow: 0 0 0 0 rgba(244, 105, 42, 0.6);
+    animation: pulso-status 2.2s ease-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulso-status {
+    0%   { box-shadow: 0 0 0 0 rgba(244, 105, 42, 0.55); }
+    70%  { box-shadow: 0 0 0 9px rgba(244, 105, 42, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(244, 105, 42, 0); }
 }
 
 /* mapa + painel lateral lado a lado */
@@ -163,19 +295,27 @@ main {
     position: relative;
     min-height: 0;
 
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 16px;
+    background:
+        radial-gradient(ellipse at center, rgba(63, 120, 209, 0.10), transparent 70%),
+        var(--superficie);
+    border: 1px solid var(--borda-azul);
+    border-radius: var(--raio);
+    box-shadow:
+        inset 0 0 60px rgba(63, 120, 209, 0.08),
+        0 10px 30px rgba(0, 0, 0, 0.3);
 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 10px;
+    padding: 18px;
 }
 
 .carregando-svg {
-    color: #aaa;
+    color: var(--texto-medio);
+    font-family: var(--fonte-display);
     font-size: 16px;
+    letter-spacing: 0.03em;
 }
 
 /* o SVG é injetado dentro de #mapaSvgContainer via JS (fetch + innerHTML) */
@@ -187,14 +327,17 @@ main {
     align-items: center;
 }
 
-/* a planta já está desenhada na orientação correta/horizontal:
-   apenas limitamos a altura para caber na tela, sem rotação */
+/* planta horizontal, fundo transparente — apenas ajustamos o encaixe */
 #mapaSvgContainer svg {
-    height: 100%;
-    width: auto;
-    max-width: 100%;
-    background: white;
-    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    background: transparent;
+}
+
+/* tipografia dos rótulos desenhados dentro do SVG */
+#mapaSvgContainer svg text {
+    font-family: var(--fonte-display) !important;
 }
 
 
@@ -208,38 +351,55 @@ main {
 
 .lab-room .status-label {
     font-size: 11px;
+    letter-spacing: 0.03em;
 }
 
-/* estados (a mesma nomenclatura usada no restante do projeto) */
+/* estados (mesma nomenclatura usada no restante do projeto) */
 
 .lab-room.livre rect.lab-rect {
-    fill: #eafff2;
-    stroke: #00a63c;
+    fill: rgba(34, 197, 94, 0.10);
+    stroke: var(--cor-livre);
     stroke-width: 3;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 102, .9));
+    filter: drop-shadow(0 0 9px rgba(34, 197, 94, .55));
 }
 .lab-room.livre .status-label {
-    fill: #00a63c;
+    fill: var(--cor-livre);
 }
 
 .lab-room.ocupado rect.lab-rect {
-    fill: #ffecec;
-    stroke: #d50000;
+    fill: rgba(239, 68, 68, 0.12);
+    stroke: var(--cor-ocupado);
     stroke-width: 3;
-    filter: drop-shadow(0 0 16px rgba(255, 40, 40, .95));
+    filter: drop-shadow(0 0 9px rgba(239, 68, 68, .6));
+    animation: pulso-ocupado 2.4s ease-in-out infinite;
 }
 .lab-room.ocupado .status-label {
-    fill: #d50000;
+    fill: var(--cor-ocupado);
+}
+
+@keyframes pulso-ocupado {
+    0%, 100% { filter: drop-shadow(0 0 7px rgba(239, 68, 68, .5)); }
+    50%      { filter: drop-shadow(0 0 15px rgba(239, 68, 68, .85)); }
 }
 
 .lab-room.indisponivel rect.lab-rect {
-    fill: #ececec;
-    stroke: #888;
-    stroke-width: 2;
+    fill: rgba(255, 255, 255, 0.03);
+    stroke: var(--cor-indisponivel);
+    stroke-width: 1.6;
     filter: none;
+    opacity: 0.65;
 }
 .lab-room.indisponivel .status-label {
-    fill: #888;
+    fill: var(--cor-indisponivel);
+}
+
+/* ambientes fixos (banheiros, portaria etc. — sem status) */
+.sala-fixa rect {
+    fill: rgba(255, 255, 255, 0.025) !important;
+    stroke: var(--texto-baixo) !important;
+}
+.sala-fixa text {
+    fill: var(--texto-medio) !important;
 }
 
 
@@ -251,19 +411,25 @@ main {
     flex: 1;
     min-height: 0;
 
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    padding: 15px;
+    background: var(--superficie);
+    border: 1px solid var(--borda-suave);
+    border-radius: var(--raio);
+    padding: 20px;
 
-    color: white;
+    color: var(--texto-alto);
 
     display: flex;
     flex-direction: column;
 }
 
 .detalhes-ocupacao h3 {
-    margin: 0 0 12px;
+    margin: 0 0 14px;
+    font-family: var(--fonte-display);
+    font-weight: 600;
     font-size: 18px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--texto-medio);
     flex-shrink: 0;
 }
 
@@ -272,27 +438,36 @@ main {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+}
+
+.lista-ocupados::-webkit-scrollbar {
+    width: 6px;
+}
+.lista-ocupados::-webkit-scrollbar-thumb {
+    background: var(--borda-azul);
+    border-radius: 6px;
 }
 
 .item-ocupado {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     align-items: flex-start;
 
-    background: rgba(255, 255, 255, 0.08);
-    border-left: 4px solid #d50000;
-    border-radius: 10px;
-    padding: 10px 12px;
+    background: var(--superficie-forte);
+    border: 1px solid var(--borda-suave);
+    border-left: 4px solid var(--cor-ocupado);
+    border-radius: var(--raio-pequeno);
+    padding: 12px 14px;
 }
 
 .item-ocupado .icone {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     flex-shrink: 0;
 
-    background: #0b1f3a;
-    color: white;
+    background: var(--fundo-degrade);
+    color: var(--texto-alto);
 
     display: flex;
     align-items: center;
@@ -306,21 +481,26 @@ main {
     display: flex;
     flex-direction: column;
     font-size: 13px;
-    line-height: 1.45;
+    line-height: 1.5;
+    color: var(--texto-medio);
 }
 
 .item-ocupado .info strong {
-    font-size: 14px;
+    font-family: var(--fonte-display);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    color: var(--texto-alto);
 }
 
 .sem-ocupacao,
 .erro-ocupacao {
-    opacity: .75;
+    color: var(--texto-medio);
     font-size: 14px;
 }
 
 .erro-ocupacao {
-    color: #ff8080;
+    color: #ff9a9a;
 }
 
 
@@ -353,6 +533,9 @@ main {
     header {
         flex-direction: column;
         align-items: flex-start;
+        height: auto;
+        padding: 14px 20px;
+        gap: 12px;
     }
 
     .info-direita {
@@ -364,7 +547,7 @@ main {
     .rodape-senai {
         flex-direction: column;
         height: auto;
-        padding: 10px;
+        padding: 14px;
         gap: 10px;
     }
 
@@ -373,26 +556,64 @@ main {
     }
 }
 
-/* TELAS GRANDES */
+/* TELAS GRANDES (TV / telão) */
 @media (min-width: 1600px) {
 
     body {
         font-size: 20px;
     }
 
+    header {
+        height: 116px;
+    }
+
     .titulo h1 {
-        font-size: 42px;
+        font-size: 44px;
     }
 
     .data {
-        font-size: 36px;
+        font-size: 22px;
+    }
+    .data strong {
+        font-size: 26px;
     }
 
     .hora {
-        font-size: 50px;
+        font-size: 46px;
+    }
+
+    .status-turno h3 {
+        font-size: 24px;
+        padding: 12px 26px;
+    }
+
+    .detalhes-ocupacao h3 {
+        font-size: 21px;
+    }
+
+    .item-ocupado .info strong {
+        font-size: 17px;
+    }
+
+    .item-ocupado .info {
+        font-size: 14px;
     }
 
     .lab-room .status-label {
         font-size: 13px;
+    }
+}
+
+@media (min-width: 2200px) {
+    .titulo h1 {
+        font-size: 56px;
+    }
+
+    .hora {
+        font-size: 58px;
+    }
+
+    .status-turno h3 {
+        font-size: 28px;
     }
 }
