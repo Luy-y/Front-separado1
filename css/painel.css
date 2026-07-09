@@ -353,9 +353,11 @@ main {
 
 /* nome do instrutor, exibido logo abaixo do status, com fonte menor */
 .lab-room .instrutor-label {
+    fill: inherit;
+    font-family: var(--fonte-display) !important;
     font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.01em;
+    font-weight: 700;
+    letter-spacing: 0.03em;
 }
 
 /* estados (mesma nomenclatura usada no restante do projeto) */
@@ -369,10 +371,6 @@ main {
 .lab-room.livre .status-label {
     fill: var(--cor-livre);
 }
-.lab-room.livre .instrutor-label {
-    fill: var(--cor-livre);
-    opacity: 0.75;
-}
 
 .lab-room.ocupado rect.lab-rect {
     fill: rgba(239, 68, 68, 0.12);
@@ -383,10 +381,6 @@ main {
 }
 .lab-room.ocupado .status-label {
     fill: var(--cor-ocupado);
-}
-.lab-room.ocupado .instrutor-label {
-    fill: var(--cor-ocupado);
-    opacity: 0.85;
 }
 
 @keyframes pulso-ocupado {
@@ -403,10 +397,6 @@ main {
 }
 .lab-room.indisponivel .status-label {
     fill: var(--cor-indisponivel);
-}
-.lab-room.indisponivel .instrutor-label {
-    fill: var(--cor-indisponivel);
-    opacity: 0.75;
 }
 
 /* ambientes fixos (banheiros, portaria etc. — sem status) */
