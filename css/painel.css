@@ -353,11 +353,12 @@ main {
 
 /* nome do instrutor, exibido logo abaixo do status, com fonte menor */
 .lab-room .instrutor-label {
-    fill: inherit;
+    fill: #1a1a1a !important;
     font-family: var(--fonte-display) !important;
-    font-size: 9px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.03em;
+    opacity: 1;
 }
 
 /* estados (mesma nomenclatura usada no restante do projeto) */
@@ -407,7 +408,6 @@ main {
 .sala-fixa text {
     fill: var(--texto-medio) !important;
 }
-
 
 /* ========================
    RESPONSIVO
