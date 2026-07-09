@@ -5,21 +5,25 @@
 <rect x="25" y="75" width="110" height="205" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
 <text x="90.0" y="177.5" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 90.0 177.5)">209 A</text>
 <text id="status-LAB209A" class="status-label" x="70.0" y="177.5" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 70.0 177.5)">INDISPONIVEL</text>
+<text id="instrutor-LAB209A" class="instrutor-label" x="54.0" y="177.5" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 54.0 177.5)"></text>
 </g>
 <g id="LAB208A" class="sala-svg lab-room indisponivel">
 <rect x="140" y="120" width="108" height="160" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
 <text x="204.0" y="200.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 204.0 200.0)">208 A</text>
 <text id="status-LAB208A" class="status-label" x="184.0" y="200.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 184.0 200.0)">INDISPONIVEL</text>
+<text id="instrutor-LAB208A" class="instrutor-label" x="168.0" y="200.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 168.0 200.0)"></text>
 </g>
 <g id="LAB207A" class="sala-svg lab-room indisponivel">
 <rect x="248" y="120" width="102" height="160" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
 <text x="309.0" y="200.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 309.0 200.0)">207 A</text>
 <text id="status-LAB207A" class="status-label" x="289.0" y="200.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 289.0 200.0)">INDISPONIVEL</text>
+<text id="instrutor-LAB207A" class="instrutor-label" x="273.0" y="200.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 273.0 200.0)"></text>
 </g>
 <g id="LAB206A" class="sala-svg lab-room indisponivel">
 <rect x="350" y="120" width="112" height="160" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
 <text x="416.0" y="200.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 416.0 200.0)">206 A</text>
 <text id="status-LAB206A" class="status-label" x="396.0" y="200.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 396.0 200.0)">INDISPONIVEL</text>
+<text id="instrutor-LAB206A" class="instrutor-label" x="380.0" y="200.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 380.0 200.0)"></text>
 </g>
 <g class="sala-svg sala-fixa">
 <rect x="462" y="70" width="90" height="155" fill="white" stroke="#1a1a1a" stroke-width="1.6" />
@@ -29,16 +33,19 @@
 <rect x="552" y="70" width="108" height="160" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
 <text x="616.0" y="150.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 616.0 150.0)">205 A</text>
 <text id="status-LAB205A" class="status-label" x="596.0" y="150.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 596.0 150.0)">INDISPONIVEL</text>
+<text id="instrutor-LAB205A" class="instrutor-label" x="580.0" y="150.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 580.0 150.0)"></text>
 </g>
 <g id="LAB204A" class="sala-svg lab-room indisponivel">
 <rect x="660" y="70" width="110" height="160" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
 <text x="725.0" y="150.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 725.0 150.0)">204 A</text>
 <text id="status-LAB204A" class="status-label" x="705.0" y="150.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 705.0 150.0)">INDISPONIVEL</text>
+<text id="instrutor-LAB204A" class="instrutor-label" x="689.0" y="150.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 689.0 150.0)"></text>
 </g>
 <g id="LAB203A" class="sala-svg lab-room indisponivel">
 <rect x="770" y="70" width="110" height="160" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
 <text x="835.0" y="150.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 835.0 150.0)">203 A</text>
 <text id="status-LAB203A" class="status-label" x="815.0" y="150.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 815.0 150.0)">INDISPONIVEL</text>
+<text id="instrutor-LAB203A" class="instrutor-label" x="799.0" y="150.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 799.0 150.0)"></text>
 </g>
 <g class="sala-svg sala-fixa">
 <rect x="552" y="285" width="133" height="60" fill="white" stroke="#1f4e96" stroke-width="1.6" />
@@ -48,11 +55,13 @@
 <rect x="522" y="345" width="163" height="120" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
 <text x="613.5" y="405.0" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 613.5 405.0)">202 A</text>
 <text id="status-LAB202A" class="status-label" x="593.5" y="405.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 593.5 405.0)">INDISPONIVEL</text>
+<text id="instrutor-LAB202A" class="instrutor-label" x="577.5" y="405.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 577.5 405.0)"></text>
 </g>
 <g id="LAB201A" class="sala-svg lab-room indisponivel">
 <rect x="522" y="465" width="163" height="125" fill="white" stroke="#1f4e96" stroke-width="2" class="lab-rect"/>
 <text x="613.5" y="527.5" fill="#1f4e96" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 613.5 527.5)">201 A</text>
 <text id="status-LAB201A" class="status-label" x="593.5" y="527.5" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 593.5 527.5)">INDISPONIVEL</text>
+<text id="instrutor-LAB201A" class="instrutor-label" x="577.5" y="527.5" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 577.5 527.5)"></text>
 </g>
 <polyline points="462,280 462,590 25,590" fill="none" stroke="#1f4e96" stroke-width="1.6"/>
 <polyline points="462,280 552,280" fill="none" stroke="#1f4e96" stroke-width="1.6"/>
@@ -92,21 +101,25 @@
 <rect x="25" y="625" width="233" height="145" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
 <text x="151.5" y="697.5" fill="#1a1a1a" font-size="16" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 151.5 697.5)">LAB MAKER</text>
 <text id="status-LABMAKER" class="status-label" x="131.5" y="697.5" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 131.5 697.5)">INDISPONIVEL</text>
+<text id="instrutor-LABMAKER" class="instrutor-label" x="115.5" y="697.5" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 115.5 697.5)"></text>
 </g>
 <g id="LAB203B" class="sala-svg lab-room indisponivel">
 <rect x="25" y="770" width="135" height="85" fill="white" stroke="#7a1f2b" stroke-width="2" class="lab-rect"/>
 <text x="102.5" y="812.5" fill="#7a1f2b" font-size="15" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 102.5 812.5)">203 B</text>
 <text id="status-LAB203B" class="status-label" x="82.5" y="812.5" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 82.5 812.5)">INDISPONIVEL</text>
+<text id="instrutor-LAB203B" class="instrutor-label" x="66.5" y="812.5" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 66.5 812.5)"></text>
 </g>
 <g id="LAB204B" class="sala-svg lab-room indisponivel">
 <rect x="25" y="855" width="135" height="90" fill="white" stroke="#7a1f2b" stroke-width="2" class="lab-rect"/>
 <text x="102.5" y="900.0" fill="#7a1f2b" font-size="15" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 102.5 900.0)">204 B</text>
 <text id="status-LAB204B" class="status-label" x="82.5" y="900.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 82.5 900.0)">INDISPONIVEL</text>
+<text id="instrutor-LAB204B" class="instrutor-label" x="66.5" y="900.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 66.5 900.0)"></text>
 </g>
 <g id="LAB205B" class="sala-svg lab-room indisponivel">
 <rect x="25" y="945" width="135" height="85" fill="white" stroke="#7a1f2b" stroke-width="2" class="lab-rect"/>
 <text x="102.5" y="987.5" fill="#7a1f2b" font-size="15" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 102.5 987.5)">205 B</text>
 <text id="status-LAB205B" class="status-label" x="82.5" y="987.5" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 82.5 987.5)">INDISPONIVEL</text>
+<text id="instrutor-LAB205B" class="instrutor-label" x="66.5" y="987.5" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 66.5 987.5)"></text>
 </g>
 <g class="sala-svg sala-fixa">
 <rect x="205" y="770" width="137" height="55" fill="white" stroke="#1a1a1a" stroke-width="1.6" />
@@ -116,31 +129,37 @@
 <rect x="205" y="825" width="137" height="105" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
 <text x="283.5" y="877.5" fill="#1a1a1a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 283.5 877.5)">ELETROHIDRO</text>
 <text id="status-ELETROHIDRO" class="status-label" x="263.5" y="877.5" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 263.5 877.5)">INDISPONIVEL</text>
+<text id="instrutor-ELETROHIDRO" class="instrutor-label" x="247.5" y="877.5" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 247.5 877.5)"></text>
 </g>
 <g id="ELETRICA" class="sala-svg lab-room indisponivel">
 <rect x="205" y="930" width="137" height="100" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
 <text x="283.5" y="980.0" fill="#1a1a1a" font-size="12" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 283.5 980.0)">ELETRICA</text>
 <text id="status-ELETRICA" class="status-label" x="263.5" y="980.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 263.5 980.0)">INDISPONIVEL</text>
+<text id="instrutor-ELETRICA" class="instrutor-label" x="247.5" y="980.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 247.5 980.0)"></text>
 </g>
 <g id="COSTURA" class="sala-svg lab-room indisponivel">
 <rect x="25" y="1030" width="135" height="200" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
 <text x="102.5" y="1130.0" fill="#1a1a1a" font-size="14" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 102.5 1130.0)">COSTURA</text>
 <text id="status-COSTURA" class="status-label" x="82.5" y="1130.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 82.5 1130.0)">INDISPONIVEL</text>
+<text id="instrutor-COSTURA" class="instrutor-label" x="66.5" y="1130.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 66.5 1130.0)"></text>
 </g>
 <g id="MODELAGEM" class="sala-svg lab-room indisponivel">
 <rect x="160" y="1100" width="65" height="130" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
 <text x="202.5" y="1165.0" fill="#1a1a1a" font-size="10" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 202.5 1165.0)">MODELAGEM</text>
 <text id="status-MODELAGEM" class="status-label" x="182.5" y="1165.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 182.5 1165.0)">INDISPONIVEL</text>
+<text id="instrutor-MODELAGEM" class="instrutor-label" x="166.5" y="1165.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 166.5 1165.0)"></text>
 </g>
 <g id="PREDIAL" class="sala-svg lab-room indisponivel">
 <rect x="225" y="1100" width="60" height="130" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
 <text x="265.0" y="1165.0" fill="#1a1a1a" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 265.0 1165.0)">PREDIAL</text>
 <text id="status-PREDIAL" class="status-label" x="245.0" y="1165.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 245.0 1165.0)">INDISPONIVEL</text>
+<text id="instrutor-PREDIAL" class="instrutor-label" x="229.0" y="1165.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 229.0 1165.0)"></text>
 </g>
 <g id="INDUSTRIAL" class="sala-svg lab-room indisponivel">
 <rect x="285" y="1100" width="60" height="130" fill="white" stroke="#1a1a1a" stroke-width="1.6" class="lab-rect"/>
 <text x="325.0" y="1165.0" fill="#1a1a1a" font-size="10" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 325.0 1165.0)">INDUSTRIAL</text>
 <text id="status-INDUSTRIAL" class="status-label" x="305.0" y="1165.0" fill="#999" font-size="11" font-weight="bold" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 305.0 1165.0)">INDISPONIVEL</text>
+<text id="instrutor-INDUSTRIAL" class="instrutor-label" x="289.0" y="1165.0" fill="#999" font-size="9" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 289.0 1165.0)"></text>
 </g>
 </g>
 </svg>

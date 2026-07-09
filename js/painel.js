@@ -24,15 +24,6 @@ const LABS = [
     // REFRIGERACAO removido — sem sala correspondente no SVG
 ];
 
-function formatarHora(data) {
-    const d = new Date(data);
-
-    return d.toLocaleTimeString("pt-BR", {
-        hour: "2-digit",
-        minute: "2-digit"
-    });
-}
-
 function formatarData() {
     const agora = new Date();
 
@@ -73,21 +64,6 @@ function getTurnoAtual() {
     }
 
     return null;
-}
-
-/* 🎨 Ícones por curso */
-function getIcone(curso) {
-
-    curso = (curso || "").toLowerCase();
-
-    if (curso.includes("desenvolvimento")) return "💻";
-    if (curso.includes("mec")) return "⚙️";
-    if (curso.includes("elet")) return "🔧";
-    if (curso.includes("log")) return "📊";
-    if (curso.includes("seg")) return "🦺";
-    if (curso.includes("info")) return "🖥️";
-
-    return "📘";
 }
 
 /* ===========================================================
@@ -145,8 +121,9 @@ function normalizarAmbiente(nome) {
 
     return null;
 }
-/* Aplica o status (livre / ocupado / indisponivel) numa sala do SVG */
-function definirStatusLab(labId, status) {
+/* Aplica o status (livre / ocupado / indisponivel) numa sala do SVG,
+   incluindo o nome do instrutor responsável quando a sala está ocupada */
+function definirStatusLab(labId, status, instrutorNome) {
 
     const grupo = document.getElementById(labId);
 
@@ -157,54 +134,21 @@ function definirStatusLab(labId, status) {
 
     const label = document.getElementById(`status-${labId}`);
 
-    if (!label) return;
+    if (label) {
+        const textos = {
+            livre: "LIVRE",
+            ocupado: "OCUPADO",
+            indisponivel: "INDISPONÍVEL"
+        };
 
-    const textos = {
-        livre: "LIVRE",
-        ocupado: "OCUPADO",
-        indisponivel: "INDISPONÍVEL"
-    };
-
-    label.textContent = textos[status] || "";
-}
-
-/* Monta o código legível (ex: LAB203B -> 203 B) */
-function codigoLegivel(labId) {
-    return labId.replace("LAB", "").replace(/(\d+)([AB])/, "$1 $2");
-}
-
-/* Atualiza o painel lateral com os detalhes das salas ocupadas agora */
-function renderizarListaOcupados(ocupados) {
-
-    const listaEl = document.getElementById("listaOcupados");
-
-    if (!listaEl) return;
-
-    const ids = Object.keys(ocupados);
-
-    if (ids.length === 0) {
-        listaEl.innerHTML =
-            '<p class="sem-ocupacao">Nenhuma sala ocupada neste momento.</p>';
-        return;
+        label.textContent = textos[status] || "";
     }
 
-    listaEl.innerHTML = ids.map(id => {
+    const instrutorEl = document.getElementById(`instrutor-${labId}`);
 
-        const r = ocupados[id];
-        const icone = getIcone(r.curso_nome);
-
-        return `
-            <div class="item-ocupado">
-                <div class="icone">${icone}</div>
-                <div class="info">
-                    <strong>${codigoLegivel(id)} — ${r.nome_turma || "-"}</strong>
-                    <span>${r.curso_nome || "-"}</span>
-                    <span>${r.instrutor_nome || "-"}</span>
-                    <span>${formatarHora(r.data_inicio)} - ${formatarHora(r.data_fim)}</span>
-                </div>
-            </div>
-        `;
-    }).join("");
+    if (instrutorEl) {
+        instrutorEl.textContent = instrutorNome || "";
+    }
 }
 
 /* ===========================================================
@@ -216,7 +160,6 @@ async function carregarOcupacao() {
     const turno = getTurnoAtual();
 
     const status = document.getElementById("statusTurno");
-    const listaEl = document.getElementById("listaOcupados");
 
     /* fora do horário de funcionamento: tudo cinza */
     if (!turno) {
@@ -224,11 +167,6 @@ async function carregarOcupacao() {
         status.textContent = "Fora do horário de funcionamento";
 
         LABS.forEach(id => definirStatusLab(id, "indisponivel"));
-
-        if (listaEl) {
-            listaEl.innerHTML =
-                '<p class="sem-ocupacao">Painel fora do horário de funcionamento.</p>';
-        }
 
         return;
     }
@@ -261,23 +199,17 @@ async function carregarOcupacao() {
             }
         });
 
-        /* aplica o status em cada sala do SVG */
+        /* aplica o status em cada sala do SVG, junto com o instrutor responsável */
         LABS.forEach(id => {
-            definirStatusLab(id, ocupados[id] ? "ocupado" : "livre");
+            const registro = ocupados[id];
+            definirStatusLab(id, registro ? "ocupado" : "livre", registro ? registro.instrutor_nome : "");
         });
-
-        renderizarListaOcupados(ocupados);
 
     } catch (err) {
 
         console.error("Erro ao carregar ocupação:", err);
 
         status.textContent = `Turno atual: ${turno} (erro ao atualizar dados)`;
-
-        if (listaEl) {
-            listaEl.innerHTML =
-                '<p class="erro-ocupacao">Erro ao carregar dados de ocupação.</p>';
-        }
     }
 }
 
