@@ -286,25 +286,14 @@ main {
 .conteudo-mapa {
     flex: 1;
     display: flex;
-    justify-content: center;   /* centraliza #mapa quando ele não preenche mais toda a largura */
-    align-items: stretch;
     gap: 20px;
     min-height: 0;
 }
 
 #mapa {
-    /* A proporção abaixo precisa refletir o viewBox atual do planta.svg (1190 x 880).
-       Se o viewBox do SVG for alterado no futuro, atualize este valor junto. */
-    aspect-ratio: 1190 / 880;
-
-    /* Em vez de esticar para preencher toda a largura da linha (o que criava uma
-       caixa larga/baixa e forçava o SVG a sobrar espaço nas laterais), a altura
-       é o que preenche o espaço vertical disponível, e a largura é derivada
-       automaticamente da proporção — exatamente como o desenho. */
+    flex: 1;
+    width: 100%;
     height: 100%;
-    width: auto;
-    max-width: 100%;   /* evita estourar a largura em telas mais estreitas/altas */
-
     position: relative;
     min-height: 0;
 
@@ -317,7 +306,7 @@ main {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 8px;   /* margem reduzida — o encaixe de proporção já elimina a maior parte do espaço morto */
+    padding: 8px;   /* margem mínima — o encaixe fino é calculado em JS, em pixels reais */
 }
 
 .carregando-svg {
@@ -336,11 +325,11 @@ main {
     align-items: center;
 }
 
-/* planta horizontal, fundo transparente — apenas ajustamos o encaixe.
-   #mapa agora já é dimensionado com o mesmo aspect-ratio do SVG, então
-   width:100%/height:100% aqui não gera mais faixas em branco: o
-   preserveAspectRatio do próprio SVG cuida do encaixe exato. */
+/* Fallback inicial (antes do JS medir o container e definir o tamanho final em px).
+   O tamanho definitivo é aplicado via style inline por ajustarTamanhoMapa() em painel.js,
+   que tem prioridade sobre esta regra — por isso não usamos max-height/aspect-ratio aqui. */
 #mapaSvgContainer svg {
+    display: block;
     width: 100%;
     height: 100%;
     background: transparent;
