@@ -350,7 +350,7 @@ main {
 }
 
 .lab-room .status-label {
-    font-size: 11px;
+    font-size: 17px;
     letter-spacing: 0.03em;
 }
 
@@ -358,7 +358,7 @@ main {
 .lab-room .instrutor-label {
     fill: #1a1a1a !important;
     font-family: var(--fonte-display) !important;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 700;
     letter-spacing: 0.03em;
     opacity: 1;
@@ -497,11 +497,11 @@ main {
     }
 
     .lab-room .status-label {
-        font-size: 13px;
+        font-size: 20px;
     }
 
     .lab-room .instrutor-label {
-        font-size: 11px;
+        font-size: 17px;
     }
 }
 
