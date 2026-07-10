@@ -121,6 +121,7 @@ function normalizarAmbiente(nome) {
 
     return null;
 }
+
 /* Aplica o status (livre / ocupado / indisponivel) numa sala do SVG,
    incluindo o nome do instrutor responsável quando a sala está ocupada */
 function definirStatusLab(labId, status, instrutorNome) {
@@ -152,10 +153,14 @@ function definirStatusLab(labId, status, instrutorNome) {
 }
 
 /* ===========================================================
-   OCUPAÇÃO
+   OCUPAÇÃO (agora via SSE)
 =========================================================== */
 
-async function carregarOcupacao() {
+let eventSource = null;
+
+/* Processa os dados recebidos (seja via SSE, seja de um fallback)
+   e aplica o status em cada sala do mapa */
+function processarOcupacao(dados) {
 
     const turno = getTurnoAtual();
 
@@ -173,44 +178,70 @@ async function carregarOcupacao() {
 
     status.textContent = `Turno atual: ${turno}`;
 
-    try {
+    const agora = new Date();
 
-        const res = await fetch(API);
+    /* mapa labId -> registro, somente das aulas em andamento AGORA */
+    const ocupados = {};
 
-        if (!res.ok) throw new Error("HTTP " + res.status);
+    (dados.registros || []).forEach(r => {
 
-        const dados = await res.json();
+        const inicio = new Date(r.data_inicio);
+        const fim = new Date(r.data_fim);
 
-        const agora = new Date();
+        if (agora >= inicio && agora <= fim) {
 
-        /* mapa labId -> registro, somente das aulas em andamento AGORA */
-        const ocupados = {};
+            const labId = normalizarAmbiente(r.ambiente_nome);
 
-        (dados.registros || []).forEach(r => {
+            if (labId) ocupados[labId] = r;
+        }
+    });
 
-            const inicio = new Date(r.data_inicio);
-            const fim = new Date(r.data_fim);
+    /* aplica o status em cada sala do SVG, junto com o instrutor responsável */
+    LABS.forEach(id => {
+        const registro = ocupados[id];
+        definirStatusLab(id, registro ? "ocupado" : "livre", registro ? registro.instrutor_nome : "");
+    });
+}
 
-            if (agora >= inicio && agora <= fim) {
+/* Abre (ou reabre) a conexão SSE com o backend */
+function conectarStreamOcupacao() {
 
-                const labId = normalizarAmbiente(r.ambiente_nome);
+    const status = document.getElementById("statusTurno");
 
-                if (labId) ocupados[labId] = r;
-            }
-        });
-
-        /* aplica o status em cada sala do SVG, junto com o instrutor responsável */
-        LABS.forEach(id => {
-            const registro = ocupados[id];
-            definirStatusLab(id, registro ? "ocupado" : "livre", registro ? registro.instrutor_nome : "");
-        });
-
-    } catch (err) {
-
-        console.error("Erro ao carregar ocupação:", err);
-
-        status.textContent = `Turno atual: ${turno} (erro ao atualizar dados)`;
+    if (eventSource) {
+        eventSource.close();
     }
+
+    eventSource = new EventSource(API);
+
+    eventSource.onmessage = (event) => {
+        try {
+            const dados = JSON.parse(event.data);
+
+            if (dados.erro) {
+                console.error("Erro reportado pelo servidor:", dados.erro);
+                status.textContent = "Erro ao atualizar dados";
+                return;
+            }
+
+            processarOcupacao(dados);
+
+        } catch (err) {
+            console.error("Erro ao processar evento SSE:", err);
+        }
+    };
+
+    eventSource.onerror = (err) => {
+        console.error("Erro na conexão SSE:", err);
+
+        status.textContent = "Reconectando ao servidor...";
+
+        // EventSource já tenta reconectar sozinho por padrão,
+        // mas fechamos e recriamos manualmente por segurança
+        eventSource.close();
+
+        setTimeout(conectarStreamOcupacao, 5000);
+    };
 }
 
 /* ===========================================================
@@ -221,14 +252,20 @@ async function iniciar() {
 
     formatarData();
 
-    await carregarMapaSvg();   // garante que as salas (ids) já existem no DOM
-    await carregarOcupacao();  // só então aplica os status
+    await carregarMapaSvg();          // garante que as salas (ids) já existem no DOM
+    conectarStreamOcupacao();         // abre o stream e aplica os status conforme chegam
 }
 
 /* ⏰ relógio */
 setInterval(formatarData, 1000);
 
-/* 🔄 atualização da ocupação */
-setInterval(carregarOcupacao, 30000);
+/* 🔄 revalida o turno a cada 30s, mesmo sem novo evento do servidor
+   (útil pra pintar tudo de cinza no exato instante em que o turno acaba) */
+setInterval(() => {
+    if (!getTurnoAtual()) {
+        document.getElementById("statusTurno").textContent = "Fora do horário de funcionamento";
+        LABS.forEach(id => definirStatusLab(id, "indisponivel"));
+    }
+}, 30000);
 
 iniciar();
