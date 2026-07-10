@@ -85,6 +85,8 @@ async function carregarMapaSvg() {
 
         container.innerHTML = svgText;
 
+        ajustarTamanhoMapa();
+
     } catch (err) {
         console.error("Erro ao carregar o mapa SVG:", err);
 
@@ -92,6 +94,66 @@ async function carregarMapaSvg() {
             '<p class="carregando-svg">Não foi possível carregar o mapa.</p>';
     }
 }
+
+/* ===========================================================
+   DIMENSIONAMENTO DO MAPA (JS, medindo pixels reais)
+   -----------------------------------------------------------
+   Em vez de depender de CSS (width/height/aspect-ratio em cascata
+   por vários níveis de flexbox, o que pode falhar silenciosamente
+   em navegadores mais antigos usados em players de sinalização),
+   medimos o espaço real disponível em #mapaSvgContainer e calculamos
+   o maior tamanho possível do SVG que ainda cabe inteiro ali dentro,
+   preservando a proporção do viewBox. É a mesma lógica de um
+   "object-fit: contain", mas aplicada via atributos reais do SVG.
+=========================================================== */
+
+/* fração do espaço disponível que o mapa deve preencher (0.97 = 97%) */
+const PREENCHIMENTO_MAPA = 0.97;
+
+function ajustarTamanhoMapa() {
+
+    const svg = document.querySelector("#mapaSvgContainer svg");
+    const container = document.getElementById("mapaSvgContainer");
+
+    if (!svg || !container) return;
+
+    // dimensões intrínsecas do desenho, lidas diretamente do viewBox do SVG
+    const vb = svg.viewBox && svg.viewBox.baseVal;
+
+    if (!vb || !vb.width || !vb.height) return;
+
+    // espaço real disponível, em pixels, medido no DOM
+    const larguraDisponivel = container.clientWidth;
+    const alturaDisponivel = container.clientHeight;
+
+    if (!larguraDisponivel || !alturaDisponivel) return;
+
+    // maior escala possível sem cortar nenhuma parte do desenho (equivalente a "contain")
+    const escala = Math.min(
+        larguraDisponivel / vb.width,
+        alturaDisponivel / vb.height
+    ) * PREENCHIMENTO_MAPA;
+
+    const larguraFinal = vb.width * escala;
+    const alturaFinal = vb.height * escala;
+
+    // aplicado como estilo inline: tem prioridade sobre qualquer regra do painel.css
+    svg.style.width = `${larguraFinal}px`;
+    svg.style.height = `${alturaFinal}px`;
+}
+
+/* Reaplica o cálculo sempre que o container mudar de tamanho
+   (redimensionamento da janela, mudança de resolução do telão etc.) */
+if (typeof ResizeObserver !== "undefined") {
+    const observadorMapa = new ResizeObserver(() => ajustarTamanhoMapa());
+    document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("mapaSvgContainer");
+        if (container) observadorMapa.observe(container);
+    });
+}
+
+/* fallback para navegadores sem ResizeObserver (comuns em players de sinalização antigos) */
+window.addEventListener("resize", ajustarTamanhoMapa);
 
 /* Converte "201 A", "Sala 203B", "LAB 205 A" etc. no id usado no SVG (ex: LAB201A) */
 function normalizarAmbiente(nome) {
