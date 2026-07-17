@@ -223,7 +223,9 @@ main {
 
 /* ===========================================================
    CRÉDITOS — ALUNOS SENAI
-   Bloco com destaque (cor laranja) para os créditos do projeto
+   Bloco com destaque (cor laranja) para os créditos do projeto.
+   Padrão: nomes fixos lado a lado, com divisórias entre eles.
+   Em telas pequenas (ver media query 900px), vira um loop contínuo.
 =========================================================== */
 
 .creditos-alunos {
@@ -243,35 +245,52 @@ main {
     color: var(--laranja-senai);
 }
 
-/* faixa com rolagem contínua dos nomes, com fade nas bordas */
+/* container da faixa de nomes — em telas normais, largura livre (cabe tudo, parado) */
 .marquee-creditos {
-    width: 320px;
-    max-width: 26vw;
-    overflow: hidden;
-    position: relative;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22px, #000 calc(100% - 22px), transparent 100%);
-            mask-image: linear-gradient(90deg, transparent 0, #000 22px, #000 calc(100% - 22px), transparent 100%);
+    width: auto;
+    max-width: none;
+    overflow: visible;
 }
 
 .marquee-conteudo {
     display: flex;
-    gap: 32px;
+    align-items: center;
+    gap: 28px;
     width: max-content;
     white-space: nowrap;
-    animation: marquee-scroll 18s linear infinite;
 }
 
 .marquee-conteudo span {
-    font-size: 12.5px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: var(--texto-medio);
+    font-size: 13.5px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--texto-alto);
+}
+
+/* cópia duplicada usada só para o loop em telas pequenas — some por padrão */
+.marquee-conteudo .nome-dup {
+    display: none;
+}
+
+/* divisória fina entre os 4 nomes reais (não entra depois do último) */
+.marquee-conteudo span:nth-child(1)::after,
+.marquee-conteudo span:nth-child(2)::after,
+.marquee-conteudo span:nth-child(3)::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin-left: 14px;
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 0.25);
 }
 
 @keyframes marquee-scroll {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
 
 .logo-final {
     margin-left: auto;
@@ -486,6 +505,35 @@ main {
         flex: none;
         height: 60vh;
         width: 100%;
+    }
+
+    /* tela pequena: aqui sim vira o loop contínuo, já que não cabe tudo parado */
+    .marquee-creditos {
+        width: 260px;
+        max-width: 34vw;
+        overflow: hidden;
+        position: relative;
+        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+                mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+    }
+
+    .marquee-conteudo {
+        animation: marquee-scroll 22s linear infinite;
+    }
+
+    .marquee-conteudo .nome-dup {
+        display: inline;
+    }
+
+    /* com as duplicatas visíveis, o 4º nome real deixa de ser o último — precisa de divisória também */
+    .marquee-conteudo span:nth-child(4)::after {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 11px;
+        margin-left: 14px;
+        vertical-align: middle;
+        background: rgba(255, 255, 255, 0.25);
     }
 }
 
