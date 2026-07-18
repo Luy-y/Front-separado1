@@ -1,4 +1,4 @@
-const API_URL = "https://api-production-19484.up.railway.app/instrutores";
+const API_URL = "https://api-production-32be.up.railway.app/instrutores";
 
 // ================= LISTAR =================
 async function listarInstrutores() {

@@ -1,7 +1,7 @@
-const API_URL = "https://api-production-19484.up.railway.app/registros";
-const API_AMBIENTES = "https://api-production-19484.up.railway.app/ambientes";
-const API_INSTRUTORES = "https://api-production-19484.up.railway.app/instrutores";
-const API_TURMAS = "https://api-production-19484.up.railway.app/turmas";
+const API_URL = "https://api-production-32be.up.railway.app/registros";
+const API_AMBIENTES = "https://api-production-32be.up.railway.app/ambientes";
+const API_INSTRUTORES = "https://api-production-32be.up.railway.app/instrutores";
+const API_TURMAS = "https://api-production-32be.up.railway.app/turmas";
 
 let ambientesMap = {};
 let instrutoresMap = {};

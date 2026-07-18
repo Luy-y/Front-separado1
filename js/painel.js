@@ -1,4 +1,4 @@
-const API = "https://api-production-19484.up.railway.app/relatorios/ocupacao-hoje";
+const API = "https://api-production-32be.up.railway.app/relatorios/ocupacao-hoje";
 
 /* IDs de todos os laboratórios monitorados (devem existir no SVG com esse mesmo id) */
 const LABS = [
