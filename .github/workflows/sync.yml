@@ -1,0 +1,19 @@
+name: Copiar para Vercel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  copiar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar projeto
+        uses: actions/checkout@v4
+
+      - name: Mandar para Vercel
+        run: |
+          git remote add vercel https://x-access-token:${{ secrets.VERCEL_TOKEN }}@github.com/pedrohenriqueabreumagaton/front-separado1.git
+          git push vercel main
