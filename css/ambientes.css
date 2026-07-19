@@ -829,11 +829,11 @@ select option{
   }
 
   .Tabelas td:nth-child(2)::before {
-    content:"Ambiente";
+    content:"Nome";
   }
 
   .Tabelas td:nth-child(3)::before {
-    content:"Capacidade";
+    content:"Descrição";
   }
 
   .Tabelas td:nth-child(4)::before {
@@ -919,5 +919,79 @@ select option{
   .footer-onda img {
 
     width:95px;
+  }
+}
+
+/* =========================
+   RESPONSIVO TELAS GRANDES
+   (monitores grandes / TV)
+========================= */
+
+@media (min-width: 1600px) {
+
+  .header-onda {
+    height: 260px;
+  }
+
+  .header-onda h1 {
+    font-size: 52px;
+  }
+
+  .menu-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .side-menu {
+    width: 320px;
+  }
+
+  .tabela-wrapper {
+    padding: 70px 40px 160px;
+  }
+
+  .Tabelas {
+    max-width: 1500px;
+  }
+
+  .Tabelas th,
+  .Tabelas td {
+    padding: 22px 18px;
+    font-size: 16px;
+  }
+
+  .Tabelas td button {
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+
+  .modal-content {
+    max-width: 480px;
+    padding: 34px;
+  }
+
+  .footer-onda {
+    height: 95px;
+  }
+
+  .footer-onda img {
+    width: 130px;
+  }
+}
+
+@media (min-width: 2200px) {
+
+  .header-onda h1 {
+    font-size: 60px;
+  }
+
+  .Tabelas {
+    max-width: 1700px;
+  }
+
+  .Tabelas th,
+  .Tabelas td {
+    font-size: 18px;
+    padding: 26px 20px;
   }
 }

@@ -289,3 +289,37 @@ body{
     padding:12px 14px;
   }
 }
+
+/* =========================================
+ RESPONSIVIDADE TELAS GRANDES
+========================================= */
+
+@media (min-width: 1600px){
+
+  .login-card{
+    max-width:460px;
+    padding:46px 40px;
+  }
+
+  .login-header h2{
+    font-size:30px;
+  }
+
+  .input-group input,
+  .login-card button{
+    padding:16px 18px;
+    font-size:15.5px;
+  }
+}
+
+@media (min-width: 2200px){
+
+  .login-card{
+    max-width:500px;
+    padding:52px 44px;
+  }
+
+  .login-header h2{
+    font-size:32px;
+  }
+}

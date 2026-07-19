@@ -50,6 +50,8 @@ html, body {
 
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
     font-family: var(--fonte-corpo);
     color: var(--texto-alto);
     background:
@@ -64,6 +66,7 @@ body {
 =========================================================== */
 
 header {
+    flex-shrink: 0;
     height: 100px;
     background: linear-gradient(180deg, var(--fundo-degrade) 0%, var(--fundo-base) 100%);
     border-bottom: 1px solid var(--borda-azul);
@@ -150,10 +153,11 @@ header {
 =========================================================== */
 
 main {
+    flex: 1;
+    min-height: 0;
     display: flex;
     gap: 20px;
     padding: 22px 28px;
-    height: calc(100vh - 172px);
 }
 
 
@@ -162,8 +166,7 @@ main {
 =========================================================== */
 
 .rodape-senai {
-    position: fixed;
-    bottom: 0;
+    flex-shrink: 0;
     width: 100%;
     height: 72px;
     background: linear-gradient(0deg, var(--fundo-degrade) 0%, var(--fundo-base) 100%);
@@ -489,12 +492,14 @@ main {
 
 @media (max-width: 900px) {
     html, body {
-        overflow: auto;
+        height: auto;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     main {
         flex-direction: column;
-        height: auto;
     }
 
     .conteudo-mapa {
@@ -612,6 +617,31 @@ main {
     .lab-room .instrutor-label {
         font-size: 17px;
     }
+
+    .rodape-senai {
+        height: 88px;
+    }
+
+    .logo {
+        height: 52px;
+    }
+
+    .icone-circulo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .textos .titulo {
+        font-size: 16px;
+    }
+
+    .textos .sub {
+        font-size: 14px;
+    }
+
+    .marquee-conteudo span {
+        font-size: 15.5px;
+    }
 }
 
 @media (min-width: 2200px) {
@@ -625,5 +655,9 @@ main {
 
     .status-turno h3 {
         font-size: 28px;
+    }
+
+    .rodape-senai {
+        height: 100px;
     }
 }

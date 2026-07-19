@@ -837,44 +837,23 @@ body{
   /* AJUSTE CONFORME SUAS COLUNAS */
 
   .Tabelas td:nth-child(1)::before {
-    content:"Ambiente";
-  }
-
-  .Tabelas td:nth-child(2)::before {
-    content:"Instrutor";
-  }
-
-  .Tabelas td:nth-child(3)::before {
-    content:"Turma";
-  }
-
-  .Tabelas td:nth-child(4)::before {
     content:"Início";
   }
 
-  .Tabelas td:nth-child(5)::before {
+  .Tabelas td:nth-child(2)::before {
     content:"Fim";
   }
 
-  .Tabelas td:nth-child(6)::before {
-    content:"Ações";
+  .Tabelas td:nth-child(3)::before {
+    content:"Ambiente";
   }
 
-  /* AÇÕES */
-
-  .Tabelas td:last-child {
-
-    display:flex;
-    flex-direction:column;
-
-    gap:8px;
+  .Tabelas td:nth-child(4)::before {
+    content:"Instrutor";
   }
 
-  .Tabelas td button {
-
-    width:100%;
-
-    margin:0;
+  .Tabelas td:nth-child(5)::before {
+    content:"Turma";
   }
 
   /* LINHA SEM OCUPAÇÃO */
@@ -920,5 +899,84 @@ body{
   .footer-onda img {
 
     width:95px;
+  }
+}
+
+/* =========================
+   RESPONSIVO TELAS GRANDES
+   (monitores grandes / TV)
+========================= */
+
+@media (min-width: 1600px) {
+
+  .header-onda {
+    height: 260px;
+  }
+
+  .header-onda h1 {
+    font-size: 52px;
+  }
+
+  #statusTurno {
+    padding: 14px 26px;
+    font-size: 16px;
+  }
+
+  .menu-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .side-menu {
+    width: 320px;
+  }
+
+  .tabela-wrapper {
+    padding: 80px 40px 160px;
+  }
+
+  .Tabelas {
+    max-width: 1500px;
+  }
+
+  .Tabelas th,
+  .Tabelas td {
+    padding: 22px 18px;
+    font-size: 16px;
+  }
+
+  .Tabelas td button {
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+
+  .modal-content {
+    max-width: 480px;
+    padding: 34px;
+  }
+
+  .footer-onda {
+    height: 95px;
+  }
+
+  .footer-onda img {
+    width: 130px;
+  }
+}
+
+@media (min-width: 2200px) {
+
+  .header-onda h1 {
+    font-size: 60px;
+  }
+
+  .Tabelas {
+    max-width: 1700px;
+  }
+
+  .Tabelas th,
+  .Tabelas td {
+    font-size: 18px;
+    padding: 26px 20px;
   }
 }

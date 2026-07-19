@@ -289,10 +289,162 @@ select {
 
 select option { background: #11182f; color: white; }
 
-/* RESPONSIVO */
+/* =========================
+   RESPONSIVO MOBILE
+========================= */
 @media (max-width: 768px) {
-  .top-controls { gap: 10px; }
-  .top-controls input, .top-controls select { width: 100%; }
+
+  .header-onda {
+    height: 180px;
+    padding: 20px;
+  }
+
+  .header-onda h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .side-menu {
+    width: 240px;
+  }
+
+  .menu-btn {
+    width: 48px;
+    height: 48px;
+    top: 18px;
+    left: 18px;
+  }
+
+  .menu-config {
+    top: 18px;
+    right: 18px;
+  }
+
+  .menu-config button {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .top-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: -25px;
+    padding: 0 16px;
+  }
+
+  .control-group {
+    width: 100%;
+  }
+
+  .top-controls input,
+  .top-controls select {
+    width: 100%;
+  }
+
+  .button-group {
+    width: 100%;
+  }
+
+  .button-group button {
+    width: 100%;
+  }
+
   .Tabelas { min-width: 800px; }
-  .tabela-wrapper { overflow-x: auto; justify-content: flex-start; }
+  .tabela-wrapper { padding: 25px 12px 120px; overflow-x: auto; justify-content: flex-start; }
+
+  .footer-onda {
+    height: 72px;
+  }
+
+  .footer-onda img {
+    width: 95px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .header-onda h1 {
+    font-size: 23px;
+  }
+
+  .side-menu {
+    width: 250px;
+  }
+
+  .Tabelas th,
+  .Tabelas td {
+    font-size: 12px;
+    padding: 12px 8px;
+  }
+}
+
+/* =========================
+   RESPONSIVO TELAS GRANDES
+   (monitores grandes / TV)
+========================= */
+
+@media (min-width: 1600px) {
+
+  .header-onda {
+    height: 260px;
+  }
+
+  .header-onda h1 {
+    font-size: 52px;
+  }
+
+  .side-menu {
+    width: 320px;
+  }
+
+  .tabela-wrapper {
+    padding: 60px 40px 160px;
+  }
+
+  .Tabelas {
+    max-width: 1500px;
+  }
+
+  .Tabelas th,
+  .Tabelas td {
+    padding: 22px 18px;
+    font-size: 16px;
+  }
+
+  .top-controls input,
+  .top-controls select {
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+
+  .button-group button {
+    padding: 14px 32px;
+    font-size: 15px;
+  }
+
+  .footer-onda {
+    height: 95px;
+  }
+
+  .footer-onda img {
+    width: 130px;
+  }
+}
+
+@media (min-width: 2200px) {
+
+  .header-onda h1 {
+    font-size: 60px;
+  }
+
+  .Tabelas {
+    max-width: 1700px;
+  }
+
+  .Tabelas th,
+  .Tabelas td {
+    font-size: 18px;
+    padding: 26px 20px;
+  }
 }
